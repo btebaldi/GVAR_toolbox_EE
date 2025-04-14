@@ -1,0 +1,657 @@
+%% LyX 2.2.3 created this file.  For more info, see http://www.lyx.org/.
+%% Do not edit unless you really know what you are doing.
+\documentclass[english,american]{beamer}
+\usepackage{mathptmx}
+\usepackage[T1]{fontenc}
+\usepackage[latin9]{luainputenc}
+\setcounter{secnumdepth}{4}
+\setcounter{tocdepth}{1}
+\usepackage{babel}
+\usepackage{array}
+\usepackage{booktabs}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{setspace}
+\ifx\hypersetup\undefined
+  \AtBeginDocument{%
+    \hypersetup{unicode=true}
+  }
+\else
+  \hypersetup{unicode=true}
+\fi
+
+\makeatletter
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% LyX specific LaTeX commands.
+%% Because html converters don't know tabularnewline
+\providecommand{\tabularnewline}{\\}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Textclass specific LaTeX commands.
+ % this default might be overridden by plain title style
+ \newcommand\makebeamertitle{\frame{\maketitle}}%
+ % (ERT) argument for the TOC
+ \AtBeginDocument{%
+   \let\origtableofcontents=\tableofcontents
+   \def\tableofcontents{\@ifnextchar[{\origtableofcontents}{\gobbletableofcontents}}
+   \def\gobbletableofcontents#1{\origtableofcontents}
+ }
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% User specified LaTeX commands.
+\usetheme{Warsaw}
+% or ...
+
+\setbeamercovered{transparent}
+% or whatever (possibly just delete it)
+
+\makeatother
+
+\begin{document}
+\selectlanguage{english}%
+
+\title[Macroeconomic shocks and Regional Employment.]{Modeling How Macroeconomic Shocks Affect Regional Employment: Analyzing
+the Brazilian Formal Labor Market using the Global VAR Approach\foreignlanguage{american}{.}}
+\selectlanguage{american}%
+
+\author[Marçal et. al. - Sao Paulo School of Economics ]{Emerson Fernandes Marçal\\
+Bruno Tebaldi\\
+}
+
+\institute[emerson.marcal@fgv.br]{Sao Paulo School of Economics, FGV \\
+}
+
+\makebeamertitle
+%\pgfdeclareimage[height=0.5cm]{institution-logo}{cemap_logo}
+
+
+%\logo{\pgfuseimage{institution-logo}}
+
+\pgfdeclareimage[height=0.5cm]{institution-logo}{logo-cemap.png}
+
+
+%\pgfdeclareimage[height=1.5cm]{institution-logo}{C:\Users\emerson.marcal\Dropbox\FGV\CEMAP\pesquisas\observatorio\TB-NFA-approach\apresentacao\FGV-seminario-2017-08-24\logo-cemap.png}
+
+
+
+\logo{\pgfuseimage{institution-logo}}
+
+\AtBeginSection[]{
+
+  \frame<beamer>{ 
+
+   \frametitle{Talking Points}   
+
+  \tableofcontents[currentsection, currentsubsection] 
+
+}
+
+}
+
+%\beamerdefaultoverlayspecification{<+->}
+\begin{frame}{Talking points}
+{\scriptsize{}}
+
+{\scriptsize \par}{\scriptsize{}\tableofcontents{}}{\scriptsize \par}
+
+{\scriptsize{}}{\scriptsize \par}
+\end{frame}
+
+
+\section{Motivation}
+\begin{frame}{Macroeconomics and Regional Data:}
+
+\selectlanguage{english}%
+\begin{itemize}
+\item \textcolor{black}{Macroeconomic shocks affect sectors and regions
+with different intensities and delays;}
+\item \textcolor{black}{Population and economic activities tend to cluster
+in specific areas due economies of scale and agglomeration.}
+\item \textcolor{black}{The population tends to locate near the sea coast
+compared with interior continental areas. }
+\item \textcolor{black}{Sector activities tend to be concentrated in some
+areas or cities. }
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Motivation}
+
+\selectlanguage{english}%
+\begin{itemize}
+\item \textcolor{black}{Macroeconomic models tend to disregard regional
+and spatial economic activity issues due to }
+\begin{itemize}
+\item \textcolor{black}{either their aggregate nature bias }
+\item \textcolor{black}{or complexity of theme. }
+\end{itemize}
+\item \textcolor{black}{However for a specific region, it is important to
+understand how economic activity variance can be decomposed into}
+\begin{itemize}
+\item \textcolor{black}{common factor (macroeconomic) and }
+\item \textcolor{black}{idiosyncratic factors;}
+\end{itemize}
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Goals}
+
+\selectlanguage{english}%
+\begin{itemize}
+\item \textcolor{black}{We want to model possible interaction between macroeconomic
+shocks and regional employment dynamics;}
+\item Assess possible different responses of regional employment to the
+same shock;
+\item Generate scenarios for regional employment evolution in Brazil;
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Possible innovation}
+
+\selectlanguage{english}%
+\begin{itemize}
+\item \textcolor{black}{Apply GVAR to link macroeconomic dimension with
+regional dimension in Brazil;}
+\begin{itemize}
+\item Deal with curse of dimensionality;
+\end{itemize}
+\item Use of IBGE Survey on economic links of Brazilian economy to construct
+weights;
+\end{itemize}
+\end{frame}
+
+
+\section{Challenges and Methods}
+
+\subsection{Global VAR}
+\begin{frame}{Global VAR approach}
+
+\begin{itemize}
+\item Global autoregressive vector (GVAR) methodology was made by Pesaran,
+Weiner and Schuermann (2004), and improved on by Dees, Mauro, Pesaran
+and Smith (2007);
+\item Chudik and Pesaran (2011) - Analyzed the curse of dimensionality in
+the case of large dynamic linear systems. 
+\item Infinite-dimensional VAR could be well approximated by a set of finite-dimensional
+small-scale models that can be consistently estimated separately.
+\item Spatial analysis is a natural option on this framework;
+\end{itemize}
+\end{frame}
+
+\begin{frame}{The Global VAR model as a two-step procedure}
+
+\begin{itemize}
+\item {\small{}First stage: Specific models of each region are estimated
+conditioned to external influences of other regions.}{\small \par}
+
+\[
+x_{it}=a_{i0}+a_{i1}t+\sum_{j=1}^{p_{i}}\Phi_{ij}x_{i,t-j}+\Lambda_{i0}x_{it}^{*}+\sum_{l=1}^{qi}\Lambda_{il}x_{i,t-l}+u_{it}
+\]
+
+\[
+x_{it}^{*}=\sum_{j=0}^{N}W_{ij}x_{jt}
+\]
+ 
+\[
+A_{i0}W_{i}x_{t}=a_{i0}+a_{i1}t+\sum_{l=1}^{p}A_{il}W_{i}x_{t-l}+\epsilon_{t}
+\]
+\end{itemize}
+\end{frame}
+
+\begin{frame}{The Global VAR model as a two-step procedure}
+
+\begin{itemize}
+\item {\small{}Second Stage: The VAR models of each region are grouped into
+a single Global VAR model.}{\small \par}
+\end{itemize}
+{\scriptsize{}
+\[
+G_{0}=\left[\begin{array}{c}
+A_{00W_{0}}\\
+A_{10W_{1}}\\
+\vdots\\
+A_{N0}W_{N}
+\end{array}\right];\quad G_{l}=\left[\begin{array}{c}
+A_{0lW_{0}}\\
+A_{1lW_{1}}\\
+\vdots\\
+A_{Nl}W_{N}
+\end{array}\right];a_{0}=\left[\begin{array}{c}
+a_{00}\\
+a_{10}\\
+\vdots\\
+a_{N0}
+\end{array}\right];\quad a_{1}=\left[\begin{array}{c}
+a_{01}\\
+a_{11}\\
+\vdots\\
+a_{N1}
+\end{array}\right];\quad\epsilon_{1}=\left[\begin{array}{c}
+\epsilon_{0t}\\
+\epsilon_{1t}\\
+\vdots\\
+\epsilon_{Nt}
+\end{array}\right];
+\]
+}{\scriptsize \par}
+
+{\scriptsize{}
+\[
+G_{0}x_{t}=a_{0}+a_{1}t+\sum_{l=1}^{p}G_{l}x_{t-l}+\epsilon_{t}
+\]
+\[
+F_{i}=G_{0}^{-1}G_{i};\quad b_{0}=G_{0}^{-1}a_{0};\quad b_{1}=G_{0}^{-1}a_{1};\quad e_{t}=G_{0}^{-1}\epsilon_{t};
+\]
+}{\scriptsize \par}
+
+{\scriptsize{}
+\[
+x_{t}=b_{o}+b_{1}t+\sum F_{i}x_{t-i}+e_{t}
+\]
+}{\scriptsize \par}
+\end{frame}
+
+
+\subsection{Some references on labor market}
+\begin{frame}{Selected papers on the subject}
+
+\begin{itemize}
+\item {\footnotesize{}Oliveira and Carneiro (2001) - Analysis of the fluctuations
+in the employment level of several Brazilian states in relation to
+national employment with the objective of verifying a long term relationship.}{\footnotesize \par}
+\item {\footnotesize{}Camila Kraide Kretzmann and Marina Silva da Cunha
+(2009) - Analysis of the formal labor market between metropolitan
+and non-metropolitan areas in Brazil.}{\footnotesize \par}
+\item {\footnotesize{}Norbert Schanne (2015) - Analysis of the regional
+labor market in Germany, focusing on forecasting regional labor markets.
+She used the GVAR methodology to perform a prospective analysis of
+the German economy.}{\footnotesize \par}
+\end{itemize}
+\end{frame}
+
+
+\section{Data}
+
+\subsection{Database Description}
+
+\begin{frame}{Brazilian Economy Structure}
+
+\begin{columns}[t]
+\selectlanguage{english}%
+
+\column{7cm}
+
+\selectlanguage{american}%
+{\tiny{}}
+\begin{figure}
+\includegraphics[width=4cm]{brazil-mapa}
+
+{\scriptsize{}\caption{{\scriptsize{}Brazilian Regions}}
+}{\scriptsize \par}
+\end{figure}
+{\tiny \par}
+\selectlanguage{english}%
+
+\column{4cm}
+\selectlanguage{american}%
+\begin{itemize}
+\item {\scriptsize{}South and South East - Industrial, services and most
+developed part of the country}{\scriptsize \par}
+\item {\scriptsize{}North East - Agricultural and tourism}{\scriptsize \par}
+\item {\scriptsize{}North - Agricultural - Amazon forest; }{\scriptsize \par}
+\item {\scriptsize{}Central (0.06)}\foreignlanguage{english}{{\scriptsize{}
+- }}{\scriptsize{}New agricultural}\foreignlanguage{english}{{\scriptsize{}
+frontier;}}{\scriptsize \par}
+\end{itemize}
+\end{columns}
+
+\end{frame}
+
+\begin{frame}{Data}
+
+{\scriptsize{}}%
+\begin{tabular}{|>{\raggedright}p{2.5cm}||>{\raggedright}p{1.5cm}||>{\raggedright}p{2cm}||>{\raggedright}p{3cm}|}
+\hline 
+\textcolor{black}{\footnotesize{}Variable} & \textcolor{black}{\footnotesize{}Source} & \textcolor{black}{\footnotesize{}Frequency} & \textcolor{black}{\footnotesize{}Range}\tabularnewline
+\hline 
+\textcolor{black}{\footnotesize{}Brazilian Industrial Production} & \textcolor{black}{\footnotesize{}IBGE} & \textcolor{black}{\footnotesize{}Monthly} & \textcolor{black}{\footnotesize{}2004-01 to 2016-12}\tabularnewline
+\hline 
+\textcolor{black}{\footnotesize{}Admissions and Dismissals} & \textcolor{black}{\footnotesize{}CAGED} & \textcolor{black}{\footnotesize{}Monthly} & \textcolor{black}{\footnotesize{}2004-01 to 2016-12}\tabularnewline
+\hline 
+\textcolor{black}{\footnotesize{}Meso-regions and municipalities} & \textcolor{black}{\footnotesize{}IBGE} & \textcolor{black}{\footnotesize{}N/A} & \textcolor{black}{\footnotesize{}as of 2015}\tabularnewline
+\hline 
+\textcolor{black}{\footnotesize{}Connections between regions} & \textcolor{black}{\footnotesize{}IBGE} & \textcolor{black}{\footnotesize{}N/A} & \textcolor{black}{\footnotesize{}as of 2007}\tabularnewline
+\hline 
+\end{tabular}{\scriptsize \par}
+\end{frame}
+
+\begin{frame}{Some Graphics}
+
+\includegraphics[scale=0.35]{../apresentacao/fig2}
+\end{frame}
+
+
+\subsection{Model}
+\begin{frame}{Model}
+
+\begin{itemize}
+\item The units in the model are the mesoregions defined by the Brazilian
+Institute of Geography and Statistics in 2015.
+\item The labor market variables are the numbers workers admitted and dismissed
+from the labor market.
+
+\[
+x_{it}=\left[\begin{array}{c}
+Adm_{it}\\
+Dis_{it}
+\end{array}\right];\quad x_{it}^{*}=\left[\begin{array}{c}
+Adm_{it}^{*}\\
+Dis_{it}^{*}
+\end{array}\right]
+\]
+
+\[
+Adm_{it}^{*}=\sum_{j=1}^{N}W_{ij}Adm_{jt}\quad Dis_{it}^{*}=\sum_{j=1}^{N}W_{ij}Dis_{jt}
+\]
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Simple Macroeconomic Model}
+
+\begin{itemize}
+\item The Macroeconomic model contains Brazilian production industrial index
+and employment admissions and dismissals with feedback from regions:
+
+\textrm{
+\[
+\omega_{t}=\left[ln(IndProd)\right]
+\]
+}
+
+\[
+\Delta\omega_{t}=\Phi_{\omega0}+\sum_{l=1}^{k1}\Phi_{\omega l}\Delta\omega_{t-l}+\sum_{l=1}^{k_{2}}\Lambda_{\omega l}\Delta x_{i,t-l}^{*}+\eta_{\omega t}
+\]
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Our weight matrix choice}
+
+\begin{columns}[t]
+\selectlanguage{english}%
+
+\column{5cm}
+
+\selectlanguage{american}%
+{\tiny{}}
+\begin{figure}
+{\tiny{}}%
+\begin{tabular}{r}
+\includegraphics[width=4cm]{../apresentacao/fig1}\tabularnewline
+\end{tabular}{\tiny \par}
+
+{\scriptsize{}\caption{{\scriptsize{}Response to changes in growth of industrial production}}
+}{\scriptsize \par}
+\end{figure}
+{\tiny \par}
+\selectlanguage{english}%
+
+\column{3cm}
+\selectlanguage{american}%
+\begin{itemize}
+\item {\scriptsize{}Survey of Brazilian Bureau of Geographic and Statistics
+on economic links of regions;}{\scriptsize \par}
+\item {\scriptsize{}Links available at all municipalities;}{\scriptsize \par}
+\end{itemize}
+\end{columns}
+
+\begin{singlespace}
+{\scriptsize{}
+\[
+W_{blue}=\frac{\left[\begin{array}{ccc}
+c_{i1} & \dots & c_{iN}\end{array}\right]}{\sum_{j=1}^{N}c_{ij}}\quad W_{blue}=\frac{\left[\begin{array}{ccc}
+5 &  & 3\end{array}\right]}{8}=\left[\begin{array}{cc}
+0.625 & 0.375\end{array}\right]
+\]
+}{\scriptsize \par}
+\end{singlespace}
+\end{frame}
+
+
+\subsection{Model details and specification}
+\begin{frame}{Results}
+\begin{itemize}
+\item 137 specific models were specified.
+\begin{itemize}
+\item Domestic variables: 98 models with lag 2 and 39 models with lag 1
+\item Foreign variables: 91 models with lag 2 and 46 models with lag 1.
+\item 9 models with 1 cointegration relation and 128 models with 2 cointegration
+relations.
+\end{itemize}
+\item Weak exogeneity status are satisfied for most of units;
+\end{itemize}
+\end{frame}
+
+
+\section{Our Results}
+
+\subsection{Employment Dynamics}
+\selectlanguage{english}%
+\begin{frame}{\foreignlanguage{american}{Brazilian Five Regions Response}}
+\selectlanguage{american}%
+\begin{columns}[t]
+\selectlanguage{english}%
+
+\column{8cm}
+
+\selectlanguage{american}%
+{\tiny{}}
+\begin{table}
+{\tiny{}}%
+\begin{tabular}{rr}
+\includegraphics[width=3.5cm]{\string"../apresentacao/5major/Figure2-a v2\string".png} & \includegraphics[width=3.5cm]{\string"../apresentacao/5major/Figure2-b v2\string".png}\tabularnewline
+\includegraphics[width=3.5cm]{\string"../apresentacao/5major/Figure2-c v2\string".png} & \includegraphics[width=3.5cm]{\string"../apresentacao/5major/Figure2-d v2\string".png}\tabularnewline
+\end{tabular}{\tiny \par}
+
+{\scriptsize{}\caption{{\scriptsize{}Response to changes in growth of industrial production}}
+}{\scriptsize \par}
+\end{table}
+{\tiny \par}
+\selectlanguage{english}%
+
+\column{3cm}
+\selectlanguage{american}%
+\begin{itemize}
+\item {\scriptsize{}South (0.18) }{\scriptsize \par}
+\item {\scriptsize{}North East (0.16) }{\scriptsize \par}
+\item {\scriptsize{}South East (0.1) }{\scriptsize \par}
+\item {\scriptsize{}North (0.06) }{\scriptsize \par}
+\item {\scriptsize{}Central (0.06)}\foreignlanguage{english}{{\scriptsize{};}}{\scriptsize \par}
+\end{itemize}
+\end{columns}
+
+\end{frame}
+\selectlanguage{american}%
+
+\selectlanguage{english}%
+\begin{frame}{\foreignlanguage{american}{Southeast States Response}}
+\selectlanguage{american}%
+\begin{columns}[t]
+\selectlanguage{english}%
+
+\column{8cm}
+
+\selectlanguage{american}%
+{\tiny{}}
+\begin{table}
+{\tiny{}}%
+\begin{tabular}{rr}
+\includegraphics[width=3.5cm]{\string"../apresentacao/Estados/Figure3-a v2\string".png} & \includegraphics[width=3.5cm]{\string"../apresentacao/Estados/Figure3-b v2\string".png}\tabularnewline
+\includegraphics[width=3.5cm]{\string"../apresentacao/Estados/Figure3-c v2\string".png} & \includegraphics[width=3.5cm]{\string"../apresentacao/Estados/Figure3-d v2\string".png}\tabularnewline
+\end{tabular}{\tiny \par}
+
+{\scriptsize{}\caption{{\scriptsize{}Response to changes in growth of industrial production}}
+}{\scriptsize \par}
+\end{table}
+{\tiny \par}
+\selectlanguage{english}%
+
+\column{3cm}
+\selectlanguage{american}%
+\begin{itemize}
+\item {\footnotesize{}Rio de janeiro (0.19) }{\footnotesize \par}
+\item {\footnotesize{}Espirito Santo (0.09) }{\footnotesize \par}
+\item {\footnotesize{}São Paulo (0.08) }{\footnotesize \par}
+\item {\footnotesize{}Minas Gerais (0.07)}\foreignlanguage{english}{{\scriptsize{};}}{\scriptsize \par}
+\end{itemize}
+\end{columns}
+
+\end{frame}
+\selectlanguage{american}%
+
+\selectlanguage{english}%
+\begin{frame}{\foreignlanguage{american}{Selected meso regions}}
+\selectlanguage{american}%
+\begin{columns}[t]
+\selectlanguage{english}%
+
+\column{8cm}
+
+\selectlanguage{american}%
+{\tiny{}}
+\begin{table}
+{\tiny{}}%
+\begin{tabular}{rr}
+\includegraphics[width=3.5cm]{\string"../apresentacao/MuncCapital/Figure5-a v2\string".png} & \includegraphics[width=3.5cm]{\string"../apresentacao/MuncCapital/Figure5-b v2\string".png}\tabularnewline
+\includegraphics[width=3.5cm]{\string"../apresentacao/MuncCapital/Figure5-c v2\string".png} & \includegraphics[width=3.5cm]{\string"../apresentacao/MuncCapital/Figure5-d v2\string".png}\tabularnewline
+\end{tabular}{\tiny \par}
+
+{\scriptsize{}\caption{{\scriptsize{}Response to changes in growth of industrial production}}
+}{\scriptsize \par}
+\end{table}
+{\tiny \par}
+\selectlanguage{english}%
+
+\column{3cm}
+\selectlanguage{american}%
+\begin{itemize}
+\item {\footnotesize{}Rio de Janeiro (0.19) }{\footnotesize \par}
+\item {\footnotesize{}Porto Alegre (0.19) }{\footnotesize \par}
+\item {\footnotesize{}Belo Horizonte (0.17) }{\footnotesize \par}
+\item {\footnotesize{}São Paulo (0.16) }{\footnotesize \par}
+\item {\footnotesize{}C. Goiás (0.07)}{\footnotesize \par}
+\item {\footnotesize{}Salvador (0.11)}{\footnotesize \par}
+\end{itemize}
+\end{columns}
+
+\end{frame}
+\selectlanguage{american}%
+
+\selectlanguage{english}%
+\begin{frame}{\foreignlanguage{american}{Selected Mesoregions}}
+\selectlanguage{american}%
+\begin{columns}[t]
+\selectlanguage{english}%
+
+\column{8cm}
+
+\selectlanguage{american}%
+{\tiny{}}
+\begin{table}
+{\tiny{}}%
+\begin{tabular}{rr}
+\includegraphics[width=3.5cm]{\string"../apresentacao/MuncRand/Figure4-a v2\string".png} & \includegraphics[width=3.5cm]{\string"../apresentacao/MuncRand/Figure4-b v2\string".png}\tabularnewline
+\includegraphics[width=3.5cm]{\string"../apresentacao/MuncRand/Figure4-c v2\string".png} & \includegraphics[width=3.5cm]{\string"../apresentacao/MuncRand/Figure4-d v2\string".png}\tabularnewline
+\end{tabular}{\tiny \par}
+
+{\scriptsize{}\caption{{\scriptsize{}Response to changes in growth of industrial production}}
+}{\scriptsize \par}
+\end{table}
+{\tiny \par}
+\selectlanguage{english}%
+
+\column{3cm}
+\selectlanguage{american}%
+\begin{itemize}
+\item {\footnotesize{}Porto Alegre (0.19) }{\footnotesize \par}
+\item {\footnotesize{}São Paulo (0.16) }{\footnotesize \par}
+\item {\footnotesize{}C. Goiás (0.07) }{\footnotesize \par}
+\item {\footnotesize{}Borborema (0.02) }{\footnotesize \par}
+\item {\footnotesize{}Jequit. (0.02)}\foreignlanguage{english}{{\scriptsize{};}}{\scriptsize \par}
+\end{itemize}
+\end{columns}
+
+\end{frame}
+\selectlanguage{american}%
+
+
+\subsection{Conditional Forecast Exercise}
+\begin{frame}{Scenario for growth}
+\begin{itemize}
+\item Several scenarios were estimated to assess the impact of industrial
+production on the labor market.
+\begin{itemize}
+\item Annual growth of 0\%: A negative employment balance for at least the
+next 8 years.
+\item Annual growth of 2\%: A positive accumulated balance of 2.5 million
+job positions for 8 years ahead.
+\item Higher growth scenarios (4\%, 6\% and 8\%) show significant improvements
+in the labor market.
+\end{itemize}
+\end{itemize}
+\end{frame}
+\selectlanguage{english}%
+
+\selectlanguage{american}%
+\begin{frame}{Dynamics of units}
+
+\begin{itemize}
+\item \href{file:4PercentGrowthtoPIM.mp4}{VIDEO}
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Conditional predictions from different scenarios}
+
+\includegraphics[width=10cm]{forecast-gvar}
+\end{frame}
+
+\begin{frame}{Actual vs. Fitted}
+
+\includegraphics[width=10cm]{forecast-actual-gvar}
+\end{frame}
+
+
+\section{Limitations and Possible Extensions}
+\begin{frame}{Limitations}
+\begin{itemize}
+\item Macroeconomic model can be improved to incorporate more variables
+and disentangle possible different types of shocks;
+\item Different weights strategies can be tried and compared;
+\item Evaluation of forecast performance.
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Extensions}
+\begin{itemize}
+\item Work at higher disaggregated level but ``municipality split epidemia''
+in Brazil must be addressed - Common minimum areas;
+\item Models can be improved for each unity using \textit{Autometrics} algorithm
+similar to Ericsson et al. (2012);
+\end{itemize}
+\end{frame}
+
+
+\section{Conclusions}
+\begin{frame}{Some tentative conclusions}
+\begin{itemize}
+\item South, Southeast and Northeast have shown to respond stronger to shocks
+in Brazilian aggregate industrial production;
+\item Macro factor does not play strong influence on North and Central regions
+meso regions;
+\item Formal employment will tend to recover slowly in Brazil in near future
+unless high growth rates starts to be observed;
+\end{itemize}
+\end{frame}
+
+
+\appendix
+
+\section*{}
+\end{document}

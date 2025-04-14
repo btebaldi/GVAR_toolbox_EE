@@ -1,0 +1,25 @@
+Table 1: Data sources and characteristics
+
+Source: elaborated by the author
+(1) Brazilian Institute of Geography and Statistics (IBGE from the Portuguese Instituto Brasileiro de Geografia e Estatística)
+(2) Ministry of Labor and Employment through the General Records of Employed and Unemployed Persons (CAGED from the Portuguese: Cadastro Geral de Empregados e Desempregados);
+
+
+
+
+Table 2: Descriptive statistics of the variables
+
+Source: elaborated by the author
+Note: The data for the industrial production is presented at log level.
+
+
+
+Table 3: OLS regression coefficients and GVAR stead state coefficients
+
+Source: elaborated by the author.
+Original data from: CAGED
+Data provided by LCA – Strategic Solutions in Economics
+Note: The OLS model is refereed in equation (18)
+t-statistics are in parentheses
+(1) b0 is the intercept in the OLS model and can be interpreted as the natural growth
+(2) b1 is the coefficient in the OLS model and can be interpreted as the effect of the industrial production growth rate in the net employment.

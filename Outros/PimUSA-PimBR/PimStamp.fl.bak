@@ -1,0 +1,21 @@
+// Batch code for UC( 2)
+module("STAMP");
+package("UCstamp");
+usedata("PimOx.in7");
+system
+{
+    Y = LDataPIM_BR;
+}
+setcmp("level", 1, 0.000238421, 0, 0);
+setcmp("slope", 1, 0, 0, 0);
+setcmp("seasonal", 12, 0, 0, 0);
+setcmp("ar", 2, 0.00192449, 0.462887, 0.933209);
+setcmp("irregular", 0, 0.000402683, 0, 0);
+intervention("outlier", 1986, 3);
+intervention("outlier", 1990, 4);
+intervention("level", 1981, 3);
+intervention("level", 1990, 12);
+intervention("level", 1991, 4);
+intervention("level", 2008, 12);
+setmodel();
+estimate("ML", 1975, 1, 2016, 12);

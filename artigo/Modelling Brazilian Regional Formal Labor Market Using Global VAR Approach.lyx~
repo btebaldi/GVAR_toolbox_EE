@@ -1,0 +1,4638 @@
+#LyX 2.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 544
+\begin_document
+\begin_header
+\save_transient_properties true
+\origin unavailable
+\textclass article
+\use_default_options true
+\maintain_unincluded_children false
+\language english
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman "default" "default"
+\font_sans "default" "default"
+\font_typewriter "default" "default"
+\font_math "auto" "auto"
+\font_default_family default
+\use_non_tex_fonts false
+\font_sc false
+\font_osf false
+\font_sf_scale 100 100
+\font_tt_scale 100 100
+\use_microtype false
+\use_dash_ligatures true
+\graphics default
+\default_output_format default
+\output_sync 1
+\bibtex_command default
+\index_command default
+\paperfontsize default
+\spacing double
+\use_hyperref false
+\papersize default
+\use_geometry true
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 1
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
+\cite_engine natbib
+\cite_engine_type authoryear
+\biblio_style plainnat
+\use_bibtopic false
+\use_indices false
+\paperorientation portrait
+\suppress_date false
+\justification true
+\use_refstyle 1
+\use_minted 0
+\index Index
+\shortcut idx
+\color #008000
+\end_index
+\leftmargin 2cm
+\topmargin 2cm
+\rightmargin 2cm
+\bottommargin 2cm
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\paragraph_indentation default
+\is_math_indent 0
+\math_numbering_side default
+\quotes_style english
+\dynamic_quotes 0
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
+\end_header
+
+\begin_body
+
+\begin_layout Title
+Modeling How Macroeconomic Shocks Affect Regional Employment: Analyzing
+ the Brazilian Formal Labor Market using the Global VAR Approach
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+The authors acknowledge Diogo de Prince and Pedro Valls for comments in
+ a previous version of this study.
+ All remaining errors are ours.
+ 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Author
+
+\lang american
+Bruno Tebaldi
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+
+\lang american
+Phd student at Sao Paulo School of Economics
+\end_layout
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+Emerson 
+\lang british
+Fernandes
+\lang american
+ Marçal
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+
+\lang american
+Sao Paulo School of Economics.
+ Corresponding author: emerson.marcal@fgv.br Rua Itapeva 286 10o andar São
+ Paulo - SP Brazil ZIP code 01332-000.
+ Phone: +55 11 37993328.
+\end_layout
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+Running Title: 
+\lang english
+Macroeconomic Shocks, Labor Market and GVAR
+\lang american
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+JEL codes: R11, E27, C23.
+\end_layout
+
+\begin_layout Standard
+Key words: GVAR, cointegration, regional dynamics and labor market.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Abstract
+Modeling How Macroeconomic Shocks Affect Regional Employment: Analyzing
+ the Brazilian Formal Labor Market using the Global VAR Approach
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+The authors acknowledge Diogo de Prince and Pedro Valls for comments in
+ a previous version of this study.
+ All remaining errors are ours.
+ 
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Author
+
+\lang american
+Bruno Tebaldi
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+
+\lang american
+Phd student at Sao Paulo School of Economics
+\end_layout
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+Emerson 
+\lang british
+Fernandes
+\lang american
+ Marçal
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+
+\lang american
+Sao Paulo School of Economics.
+ Corresponding author: emerson.marcal@fgv.br Rua Itapeva 286 10o andar São
+ Paulo - SP Brazil ZIP code 01332-000.
+ Phone: +55 11 37993328.
+\end_layout
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\end_layout
+
+\begin_layout Abstract
+Assessing linkages across different regions and how macroeconomic shocks
+ spread out across regions is not an easy task.
+ In this study we address this problem using a global vector autoregressive
+ methodology that deals with the curse of dimensionality in an ingenious
+ form.
+ Focusing on the Brazilian labor market, identified and quantified how a
+ shock in an aggregate economic activity spreads out regionally and throughout
+ time.
+ Another novelty of our work is the use of information collected by the
+ Brazilian Bureau of Geography and Statistics to measure how regions are
+ linked by analyzing infrastructure linkages of Brazilian municipalities
+ in terms of airports, roads, ports, education, health, and tourism activities.
+ Interdependence among regions is measured not only by closeness but also
+ by considering economic linkages.
+ In terms of regional sensitivity to macroeconomic shocks, we provide evidence
+ that these shocks tend to cause stronger effects on the South, Southeast,
+ and Midwest regions than the Northeast and North regions.
+ This conclusion is in line with the idea that the formal labor market is
+ better developed in the former regions than the latter.
+ The South, Southeast, and Midwest regions in Brazil have better economic
+ and social indicators.
+\end_layout
+
+\begin_layout Standard
+JEL codes: R11, E27, C23.
+\end_layout
+
+\begin_layout Standard
+Key words: GVAR, cointegration, regional dynamics and labor market.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset toc
+LatexCommand tableofcontents
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Newpage pagebreak
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Introduction
+\end_layout
+
+\begin_layout Standard
+
+\color black
+Macroeconomic shocks affect sectors and regions with different intensities
+ and delays.
+ Population and economic activities tend to cluster in specific areas due
+ economies of scale and agglomeration.
+ The population tends to locate near the sea coast compared with interior
+ continental areas.
+ Sector activities tend to be concentrated in some areas or cities.
+ Existence of a good economic infrastructure such as roads, airports, ports,
+ and telecommunications facilities links regions economically and provides
+ channels that can spread out economic shocks among regions.
+ Macroeconomic models tend to disregard regional and spatial economic activity
+ issues due to either their aggregate nature bias or complexity of theme.
+ However for a specific region, it is important to understand how economic
+ activity variance can be decomposed into macroeconomic and idiosyncratic
+ factors.
+\end_layout
+
+\begin_layout Standard
+In the past years, time series data at disaggregated and regional levels
+ are becoming available.
+ At the same time, efforts have been made in econometric literature to model
+ high-dimensional problems.
+ Two challenges must be faced to address interdependence among regions,
+ and linkages from regions to macroeconomic scenario.
+ The first is the curse of dimensionality.
+ The second challenge involves modeling the linkage between regions.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset citation
+LatexCommand citet
+key "chudik2011infinite"
+literal "true"
+
+\end_inset
+
+ suggested two approaches to handle the curse of dimensionality: (i) shrinkage
+ of the parameter space and (ii) shrinkage of the data.
+ The authors dealt with the curse of dimensionality by shrinking the parameter
+ space as the number of endogenous variables tends to infinity.
+ In this configuration, the infinite-dimensional vector autoregressive model
+ could be well approximated by a set of finite-dimensional small-scale models.
+ Moreover, this model can be estimated separately in a consistent manner,
+ which is the global vector autoregressive (GVAR) model proposed by 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "pesaran2004modeling"
+literal "true"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Therefore, this study proposes a novel approach for dealing with the curse
+ of dimensionality when modeling the labor market: use of the GVAR methodology
+ to model the labor market at a regional level, accounting for interdependence
+ among regions as well as among global macroeconomic variables.
+ The GVAR methodology eliminates the curse of dimensionality and provides
+ a parsimonious model for the labor market, and since the all variables
+ are treated as endogenous, the GVAR model allows the global variables to
+ be affected by the regional variables through a feedback channel.
+\end_layout
+
+\begin_layout Standard
+We use information collected by the Brazilian Institute of Geography and
+ Statistics (IBGE)
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+Initials come from 
+\begin_inset Quotes eld
+\end_inset
+
+Instituto Brasileiro de Geografia e Estatísticas
+\begin_inset Quotes erd
+\end_inset
+
+.
+ 
+\end_layout
+
+\end_inset
+
+ that maps infrastructure and economic linkages across all municipalities
+ in Brazil to construct the weights used in GVAR to model interdependence
+ across regions.
+ We do not restrict our analysis to neighborhood effects on economic activity
+ by constructing a measure of economic connections.
+\end_layout
+
+\begin_layout Standard
+Focusing on the Brazilian labor market, the aim of study is twofold.
+ First, we want to model the link between an aggregate macroeconomic variable
+ and regional labor dynamics as well as accounts for interdependence among
+ Brazilian regions.
+ To achieve that, a GVAR methodology proposed by 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "pesaran2004modeling"
+literal "true"
+
+\end_inset
+
+ is used.
+ Second, we want to map how regional formal labor employment reacts to Brazilian
+ national economic activity.
+ We employ monthly records of admissions and discharges in the Brazilian
+ formal regional labor market.
+ The period of the study is only 2004 to 2016 due to data constraints.
+ The model analysis led to the conclusion that the Brazilian Northeast and
+ South regions are the most elastic, whereas the North and Central regions
+ are less sensitive to macroeconomic shocks.
+ The Southeast region ‒ the most developed in the country ‒ is at the middle
+ level.
+\end_layout
+
+\begin_layout Standard
+This study is divided into sections as follows: section 2 is a brief literature
+ review of previous works related to the purpose of this study; section
+ 3 presents the methodology; section 4 defines the models used; section
+ 5 describes the data with a brief description of sources and characteristics;
+ section 6 reports the results; and section 7 contains final considerations.
+ 
+\end_layout
+
+\begin_layout Section
+Literature Review
+\end_layout
+
+\begin_layout Standard
+This section presents a brief literature review on the literature that deals
+ with spatial time series models and labor market.
+ 
+\end_layout
+
+\begin_layout Standard
+Firstly, focusing on the Brazilian labor market, 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "oliveira2001flutuaccoes"
+literal "true"
+
+\end_inset
+
+ analyzed the fluctuations in the employment level of several Brazilian
+ states compared to national employment.
+ The purpose of their study was to verify whether it is possible to establish
+ a long-term relationship between state employment and nationwide employment.
+ To achieve this the authors applied a cointegration analysis, a methodology
+ proposed by 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "engle1987co"
+literal "true"
+
+\end_inset
+
+, as well as the model of unrestricted error correction as proposed by 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "pesaran1996testing"
+literal "true"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+The authors used a database that included a comprehensive coverage of the
+ labor market in the Brazilian states, using data from the Annual Report
+ on Social Information (RAIS)
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+ RAIS from the Portuguese Relação Anual de Informações Sociais.
+\end_layout
+
+\end_inset
+
+ from 1985 through 1996.
+ The results obtained from an Vector Error Correction model were consistent
+ with those obtained with Engle and Granger method (
+\begin_inset CommandInset citation
+LatexCommand citet
+key "engle1987co"
+literal "true"
+
+\end_inset
+
+).
+ The results lead to the conclusion that employment fluctuations in most
+ states shares a common trend with national employment level.
+\end_layout
+
+\begin_layout Standard
+The hypothesis that the formal labor market presents a different dynamics
+ in Brazilian metropolitan and non-metropolitan areas was tested by 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "kretzmann2009flutuaccoes"
+literal "true"
+
+\end_inset
+
+.
+ The goal of their study was to analyze the fluctuations in the labor market
+ of metropolitan and non-metropolitan Brazilian areas.
+ They used employment and unemployment data from the Ministry of Labor and
+ Employment through the General Records of Employed and Unemployed Persons
+ - CAGED
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+Initials comes from 
+\begin_inset Quotes eld
+\end_inset
+
+
+\shape italic
+Cadastro Geral de Empregados e Desempregados
+\shape default
+
+\begin_inset Quotes erd
+\end_inset
+
+ in Portuguese)
+\end_layout
+
+\end_inset
+
+ - using monthly data from 1996 through 2007.
+ 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "kretzmann2009flutuaccoes"
+literal "true"
+
+\end_inset
+
+ used cointegration analysis through the traditional method proposed by
+ Engle-Granger, as well as the method proposed by 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "pesaran1996testing"
+literal "true"
+
+\end_inset
+
+.
+ The two methods produced the similar results, suggesting that the metropolitan
+ and non-metropolitan areas are not co-integrated.
+\end_layout
+
+\begin_layout Standard
+None of these paper deals with the curse of dimensionality.
+ The authors opt to with pairs of series.
+ The evidence that states and national share a common trend highlight a
+ possible channel linking macro and regional dynamics.
+ Evidence that metropolitan and non metropolitan areas do not share a common
+ trend may be explained by the fact that neighborhood effects are not that
+ relevant but when corrected by infrastructure connections they may be.
+ This hypothesis is investigated in this work.
+ 
+\end_layout
+
+\begin_layout Standard
+Secondly, 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "pesaran2004modeling"
+literal "true"
+
+\end_inset
+
+ introduced the Global Vector Autoregressive (GVAR) methodology by means
+ of a study that modeled 11 different regions using data from 1979 through
+ 1999.
+ This methodology was improved by 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "dees2007exploring"
+literal "true"
+
+\end_inset
+
+ with the collaboration of the European Central Bank.
+\end_layout
+
+\begin_layout Standard
+One of the first studies that applied GVAR to tackle interdependence across
+ regions is 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "schanne2015global"
+literal "true"
+
+\end_inset
+
+.
+ The author analyzed the regional labor market in Germany with a focus on
+ forecasting regional labor markets.
+ His study had two goals: the first one is to estimate a the GVAR model,
+ as proposed by 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "pesaran2004modeling"
+literal "true"
+
+\end_inset
+
+.
+ Second, to use the developed GVAR model to construct a forecast for German
+ employment accounting for spatial effects.
+\end_layout
+
+\begin_layout Standard
+The GVAR model allows both the analysis of strong cross-section dependence
+ and weak cross-section dependency.
+ Consequently, 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "schanne2015global"
+literal "true"
+
+\end_inset
+
+ concludes that the data indicate semi-strong cross-section dependence and
+ has consistent results since Germany is a polycentric economy, in contrast
+ with the United Kingdom or France (places where there are clearly dominant
+ regions).
+ The final model used in his study is a basic GVAR specification, which
+ is a model in first differences without imposing cointegration relations,
+ and did not include a dominant region.
+\end_layout
+
+\begin_layout Standard
+In his forecasting experiment, 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "schanne2015global"
+literal "true"
+
+\end_inset
+
+ estimated the basic GVAR model and GVAR models with leading indicators.
+ The author used these models as a predictive forecasting tool for three
+ and twelve months ahead – forecasting the level of unemployment in the
+ regional divisions according to the federal employment agency of Germany.
+ For comparison purposes, each indicator was estimated by a VAR in differences
+ and a VAR in level.
+ The accuracy of the prediction was evaluated by comparing the absolute
+ mean of prediction errors (percentage) and by the Diebold-Mariano test
+ (
+\begin_inset CommandInset citation
+LatexCommand citet
+key "DM1995"
+literal "true"
+
+\end_inset
+
+).
+ Finally, 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "schanne2015global"
+literal "true"
+
+\end_inset
+
+ concluded that there is significant improvement in the accuracy of predictions
+ when considering the interdependence between regions, emphasizing that
+ the degree of improvement depends on the variables and horizon.
+ 
+\end_layout
+
+\begin_layout Section
+Methodology
+\end_layout
+
+\begin_layout Standard
+This section presents and describes the GVAR methodology, which is the main
+ methodology used in this study.
+ It is assumed that the reader is familiar with the VAR methodology and
+ VECM as well as their terminologies.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset citation
+LatexCommand citet
+key "chudik2011infinite"
+literal "true"
+
+\end_inset
+
+ considered the curse of dimensionality in the case of large linear dynamic
+ systems.
+ To deal with the curse, they proposed to shrink the parameter space in
+ the limit as the number of endogenous variables tends to infinity.
+ They showed that by shrinking the parameter space, the infinite-dimensional
+ VAR could be well approximated by a set of finite-dimensional small-scale
+ models that can be consistently estimated separately, which is in the spirit
+ of the GVAR models proposed in 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "pesaran2004modeling"
+literal "true"
+
+\end_inset
+
+.
+ Therefore, 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "chudik2011infinite"
+literal "true"
+
+\end_inset
+
+ concluded that the GVAR approach can be used as an approximation to an
+ nfinite dimension vector autoregressive model (IVAR) featuring all macroeconomi
+c variables.
+ This is true for stationary models as well as for systems with variables
+ integrated of order one.
+\end_layout
+
+\begin_layout Standard
+The GVAR model is a compact model that combines individual VECMs in which
+ domestic variables are related to individual-specific foreign variables
+ in a consistent manner.
+ 
+\end_layout
+
+\begin_layout Subsection
+Global vector autoregressive model
+\end_layout
+
+\begin_layout Standard
+The GVAR methodology was originally proposed by 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "pesaran2004modeling"
+literal "true"
+
+\end_inset
+
+ as a practical approach to construct a coherent global model.
+ In the traditional VAR methodology, an unrestricted VAR(p) model with 
+\shape italic
+k
+\shape default
+ endogenous variables covering 
+\shape italic
+N
+\shape default
+ countries has a large number of unknown parameters of the order 
+\begin_inset Formula $(k∙N)^{2}p+kN$
+\end_inset
+
+ in the mean plus 
+\begin_inset Formula $\frac{(k∙N+1)kN}{2}$
+\end_inset
+
+ in the variance, thus requiring a parsimonious solution.
+ Therefore, the authors proposed the use of a model wherein, first, the
+ error correction models specific to each region are estimated, with the
+ domestic macroeconomic variables related to the corresponding foreign variables
+, and second the models from each region are combined to generate forecasts
+ for all variables.
+ In short, the GVAR model combines the VECM models of each region, so that
+ domestic variables are related to regionally specific foreign variables
+ in a consistent manner.
+ Therefore, the model can consider the interdependencies between economic
+ regions in the analysis.
+\end_layout
+
+\begin_layout Standard
+Subsequently 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "dees2007exploring"
+literal "true"
+
+\end_inset
+
+ improved the GVAR model with the cooperation of the European Central Bank.
+ This version of the GVAR model included 26 countries (covering 90% of world
+ production), with the Euro area being considered as one sole economy with
+ estimates from 1979 to 2003.
+ The version of GVAR model used in this study is based on that of 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "dees2007exploring"
+literal "true"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+The GVAR model can be summarized as a two-step procedure.
+ In the first step, specific models of each region are estimated that are
+ conditioned to the external influences of other regions.
+ That is, the models are represented as VAR models, which have domestic
+ variables and foreign variables, the latter being treated as weakly exogenous.
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+See 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "engle1983exogeneity"
+literal "true"
+
+\end_inset
+
+ for a definition.
+\end_layout
+
+\end_inset
+
+ In the second step, the VAR models of each region are grouped into one
+ single GVAR model.
+ The GVAR model, as well as any VAR model, can be used for analyzing shocks
+ in the economy and making predictions.
+\end_layout
+
+\begin_layout Subsubsection
+Specific models for each region
+\end_layout
+
+\begin_layout Standard
+For the specific models used in the first stage of the GVAR methodology,
+ consider a panel with 
+\begin_inset Formula $N$
+\end_inset
+
+ elements, each element showing 
+\begin_inset Formula $k_{i}$
+\end_inset
+
+ variables observed during periods 
+\begin_inset Formula $t=1,2,\cdots,T$
+\end_inset
+
+.
+ Within this panel structure the following variables are defined: 
+\begin_inset Formula $x_{i,t}$
+\end_inset
+
+ as a vector 
+\begin_inset Formula $k_{i}×1$
+\end_inset
+
+ of domestic variables for element 
+\shape italic
+i
+\shape default
+ in period 
+\shape italic
+t
+\shape default
+; 
+\begin_inset Formula $x_{it}^{*}$
+\end_inset
+
+ as a vector 
+\begin_inset Formula $k^{*}×1$
+\end_inset
+
+ of foreign variables; and 
+\begin_inset Formula $u_{i,t}$
+\end_inset
+
+ as an error vector.
+ Thus, following the notation of 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "chudik2016theory"
+literal "true"
+
+\end_inset
+
+, the specific models of each element consist of a set of domestic and foreign
+ variables.
+ Specifically, for any 
+\begin_inset Formula $i$
+\end_inset
+
+ element:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+x_{i,t}=a_{i0}+a_{i1}t+\sum\limits _{j=1}^{p_{i}}\Phi_{ij}x_{i,t-j}+\Lambda_{i0}x_{i,t}^{*}+\sum\limits _{l=1}^{q_{i}}\Lambda_{il}x_{i,t-l}^{*}+u_{i,t},
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+where 
+\begin_inset Formula $\Phi_{ij}$
+\end_inset
+
+ is an array of lag coefficients for lag 
+\begin_inset Formula $j$
+\end_inset
+
+ associated with domestic variables, and 
+\begin_inset Formula $Λ_{il}$
+\end_inset
+
+ is an array of lag coefficients for lag 
+\begin_inset Formula $l$
+\end_inset
+
+ associated with foreign variables.
+\end_layout
+
+\begin_layout Standard
+The GVAR model treats foreign variables as weights averages of the domestic
+ variables of each corresponding element, and the weights are specific to
+ each unit.
+ Therefore, the foreign variables of each element 
+\shape italic
+i
+\shape default
+ can be computed as weights of the domestic variables of other units in
+ the panel.
+ 
+\begin_inset Formula $W_{ij}$
+\end_inset
+
+ is a weighting matrix, where 
+\begin_inset Formula $j=1,2,\cdots,N$
+\end_inset
+
+ is defined as a set of weights with the following characteristics: 
+\begin_inset Formula $W_{ii}=0$
+\end_inset
+
+ and 
+\begin_inset Formula $\sum_{j=1}^{N}W_{ij}=1$
+\end_inset
+
+.
+ Thus, the foreign variables can be defined as
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+x_{i,t}^{*}=\sum\limits _{j=0}^{N}W_{ij}x_{jt}.\label{eq:W}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The weights are predetermined and used to capture the importance of region
+ 
+\begin_inset Formula $j$
+\end_inset
+
+ for the economy of region 
+\begin_inset Formula $i$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+From the domestic and foreign variables estimated from the weighting previously
+ mentioned, VECMs are estimated separately for each region, considering
+ that in the VECMs, the foreign variables 
+\begin_inset Formula $x_{i,t}^{*}$
+\end_inset
+
+ are treated as weakly exogenous.
+ The use of the VECMs allows cointegration between domestic variables and
+ between domestic and foreign variables.
+\end_layout
+
+\begin_layout Subsubsection
+Global model
+\end_layout
+
+\begin_layout Standard
+Although estimation is performed individually, element by element, the GVAR
+ model is solved by considering all variables as endogenous to the system.
+ Thus, from the specific model of each element, 
+\begin_inset Formula $Z_{i,t}$
+\end_inset
+
+ is defined as
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+Z_{i,t}=\begin{bmatrix}x_{i,t}\\
+x_{i,t}^{*}
+\end{bmatrix},\label{eq:ZZ}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Using 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:W"
+
+\end_inset
+
+ in 
+\begin_inset CommandInset ref
+LatexCommand eqref
+reference "eq:ZZ"
+
+\end_inset
+
+ it is possible to obtain
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+A_{i0}Z_{i,t}=a_{i0}+a_{i1}t+\sum_{l=1}^{p}A_{il}Z_{i,t-l}+ε_{i,t},\label{eq:AZ}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+where 
+\begin_inset Formula $p=\max_{i}\{p,q_{i}\}$
+\end_inset
+
+, 
+\begin_inset Formula $A_{i0}=[\begin{array}{cc}
+I_{k_{i}} & -\Lambda_{i0}\end{array}]$
+\end_inset
+
+, and 
+\begin_inset Formula $A_{il}=[\begin{array}{cc}
+\Phi_{il} & \Lambda_{il}\end{array}]$
+\end_inset
+
+ for 
+\begin_inset Formula $l=1,2,⋯,p$
+\end_inset
+
+.
+ Moreover we define 
+\begin_inset Formula $\Phi_{il}=0$
+\end_inset
+
+ for 
+\begin_inset Formula $l>p_{i}$
+\end_inset
+
+ and 
+\begin_inset Formula $\Lambda_{il}=0$
+\end_inset
+
+ for 
+\begin_inset Formula $l>q_{i}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Let 
+\begin_inset Formula $x_{t}=[x_{0,t}^{'},x_{1,t}^{'},\cdots,x_{N,t}^{'},]^{'}$
+\end_inset
+
+ be a vector 
+\begin_inset Formula $k×1$
+\end_inset
+
+ of all the variables in the panel, where 
+\begin_inset Formula $k=∑_{i=1}^{N}k_{i}$
+\end_inset
+
+ .
+ 
+\begin_inset Formula $W_{i}$
+\end_inset
+
+ can be defined as a matrix of dimension 
+\begin_inset Formula $(k_{i}+k_{i}^{*})×1$
+\end_inset
+
+ of known constants defined in terms of the individual weights 
+\begin_inset Formula $W_{ij}$
+\end_inset
+
+.
+ Therefore, variables of the specific models are defined as a function of
+ 
+\begin_inset Formula $x_{t}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+Z_{i,t}=W_{i}x_{t}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Using this identity, the individual models can be written as
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+A_{i0}W_{i}x_{t}=a_{i0}+a_{i1}t+\sum_{l=1}^{p}A_{il}W_{i}x_{t-l}+ε_{i,t},
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+It is possible to combine the new individual models into one single model,
+ and this can be done by “stacking up” each model in a large-scale VAR.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+G_{0}x_{t}=a_{0}+a_{1}t+\sum_{l=1}^{p}G_{l}x_{t-l}+ε_{t},\label{eq:g0xt}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+where
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\begin{array}{ccccc}
+G_{0}=\begin{bmatrix}A_{00}W_{0}\\
+A_{10}W_{1}\\
+\vdots\\
+A_{N0}W_{N}
+\end{bmatrix}, & G_{1}=\begin{bmatrix}A_{0l}W_{0}\\
+A_{1l}W_{1}\\
+\vdots\\
+A_{Nl}W_{N}
+\end{bmatrix}, & a_{0}=\begin{bmatrix}a_{00}\\
+a_{10}\\
+\vdots\\
+a_{N0}
+\end{bmatrix}, & a_{1}=\begin{bmatrix}a_{01}\\
+a_{11}\\
+\vdots\\
+a_{N1}
+\end{bmatrix}, & \varepsilon_{t}=\begin{bmatrix}\varepsilon_{0,t}\\
+\varepsilon_{1,t}\\
+\vdots\\
+\varepsilon_{N,t}
+\end{bmatrix},\end{array}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Since the 
+\begin_inset Formula $G_{0}$
+\end_inset
+
+ matrix is a non-singular matrix, which depends only on the estimated parameters
+ and the link matrix 
+\begin_inset Formula $W_{i}$
+\end_inset
+
+, it is possible to rewrite equation (
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:g0xt"
+
+\end_inset
+
+) as
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+x_{t}=b_{0}+b_{1}t+\sum_{i=1}^{p}F_{i}x_{t-i}+\epsilon_{t},
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+where
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\begin{array}{c}
+F_{i}=G_{0}^{-1}G_{i},\\
+b_{0}=G_{0}^{-1}a_{0},\\
+b_{1}=G_{0}^{-1}a_{1},\\
+\epsilon_{t}=G_{0}^{-1}ε_{t},
+\end{array}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Hence, the global model, which consists of a set of individual models from
+ each region, can be solved recursively.
+ With that, it is possible to consistently determine the coefficients of
+ the model.
+\end_layout
+
+\begin_layout Subsubsection
+Dominant unit model
+\end_layout
+
+\begin_layout Standard
+Global VAR is based on the hypothesis of weak exogeneity (
+\begin_inset CommandInset citation
+LatexCommand citep
+key "engle1983exogeneity"
+literal "true"
+
+\end_inset
+
+).
+ If this hypothesis fails for one or more regions, these regions must be
+ modeled jointly.
+ In spatial analysis, it is possible that some important regions affect
+ others in a specific form.
+ This information must be included in the model.
+ Therefore, vector 
+\begin_inset Formula $ω_{t}$
+\end_inset
+
+ of common variables and its lagged values augment each specific model.
+ So, each element of the model can be stated as
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+x_{i,t}=a_{i0}+a_{i1}t+\sum_{j=1}^{p_{i}}\Phi_{ij}x_{i,t-j}+\Lambda_{i0}x_{i,t}^{*}+\sum_{l=1}^{q_{i}}\Lambda_{il}x_{i,t-l}^{*}+D_{i0}ω_{t}+\sum_{l=1}^{s_{i}}Ψ_{il}ω_{t-l}+u_{i,t},
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The marginal model for the dominant variables can be estimated with the
+ feedback effects from 
+\begin_inset Formula $x_{t}$
+\end_inset
+
+, or not.
+ The feedback from the variables in the GVAR model are captured via cross-sectio
+n averages, and this is done by augmenting the dominant unit model with
+ lags of 
+\begin_inset Formula $x_{ωt}^{*}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+ω_{t}=\sum_{l=1}^{p_{ω}}\Phi_{ωl}ω_{t-l}+\sum_{l=1}^{q_{ω}}\Lambda_{ωl}x_{i,t-l}^{*}+\eta_{ωt}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Different lag orders for the dominant variables (
+\begin_inset Formula $p_{ω}$
+\end_inset
+
+) and cross-section averages (
+\begin_inset Formula $q_{ω}$
+\end_inset
+
+) could be considered.
+ It is worthy to point out that contemporaneous values of foreign variables
+ do not feature in the equation.
+\end_layout
+
+\begin_layout Subsection
+Regional weights
+\end_layout
+
+\begin_layout Standard
+Finally, the number of connections between regions were obtained from 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "ibge"
+literal "true"
+
+\end_inset
+
+.
+ This work aims to determine economic linkage among municipalities in Brazil.
+ The study analyzed not only regular transport links, such as those that
+ go to the urban centers, but also the main destinations of the residents
+ to obtain products and services, such as general goods, education, airport
+ travel, and health services.
+ The acquisition of agricultural inputs and destination of the agricultural
+ products were also analyzed in the study.
+ The main result of the research is a Brazilian urban network map that connects
+ all 5,564 Brazilian municipalities.
+ This map contains the hierarchy of the urban network and the regions of
+ influence of each urban center.
+\end_layout
+
+\begin_layout Standard
+A chart indicating the connections between all Brazilian cities is constructed
+ by merging the links provided in the urban network framework, which are
+ the main links between municipalities, with the links regarding airport
+ connections, shopping destinations, education, health services, and recreation
+ activities.
+ 
+\end_layout
+
+\begin_layout Standard
+Since every city belongs to a mesoregion, the links between mesoregions
+ are also determined with the following characteristics: if the two cities
+ are within the same region then the link between them is an internal link;
+ if the two cities are in different mesoregions, then the link between them
+ is a connection between the two mesoregions.
+\end_layout
+
+\begin_layout Standard
+As mentioned earlier, the weight matrix is a function of the number of connectio
+ns between regions; however at this point, it is worth mentioning that some
+ connections are more important than others.
+ Moreover, since the measurement of importance for each connection between
+ each region is unfeasible, an equal weight to all connections is assumed,
+ resulting in a linear function, which is the average.
+\end_layout
+
+\begin_layout Standard
+The weight matrix to region 
+\shape italic
+i
+\shape default
+ can then be determined by the number of connections to other regions divided
+ by its total number of connections.
+ Therefore, the weight vector for each region is determined as
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+W_{i}=\frac{\begin{bmatrix}C_{i1} & \cdots & C_{iN}\end{bmatrix}}{\sum_{j=1}^{N}C_{ij}},\label{eq:dddd}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+where 
+\begin_inset Formula $C_{ij}$
+\end_inset
+
+ is the number of connections that originated at region 
+\begin_inset Formula $i$
+\end_inset
+
+ and have region 
+\begin_inset Formula $j$
+\end_inset
+
+ as destination, keeping in mind that connections within the same region
+ (
+\begin_inset Formula $i=j$
+\end_inset
+
+), also called internal links, have a zero weight (
+\begin_inset Formula $C_{ii}=0$
+\end_inset
+
+).
+\end_layout
+
+\begin_layout Standard
+One most important step in GVAR methodology is the construction of the weight
+ matrix.
+ In Pesaran’s initial work, the weight matrix is defined by country-specific
+ trade weights.
+ In fact, the weight matrix 
+\begin_inset Formula $W_{i}$
+\end_inset
+
+ is designed to capture the importance of all other regions for region 
+\shape italic
+i
+\shape default
+ (
+\begin_inset CommandInset citation
+LatexCommand citealp
+key "di2013gvar"
+literal "true"
+
+\end_inset
+
+).
+ So, to determine the weight matrix it is necessary to determine the importance
+ of each region in respect to every other region.
+\end_layout
+
+\begin_layout Standard
+Focusing on the labor market, to determine the importance of a region to
+ another is to determine the importance of one labor market to another labor
+ market.
+ Each region has its own labor market with firms and workers, and since
+ firms cannot change markets, it is the workers that freely change markets.
+ In other words, a worker can look for a job in other regions, but a firm
+ must attract workers from other regions to its own market.
+ Consequently, for a worker to commute to another region, there must be
+ a connection between these regions.
+\end_layout
+
+\begin_layout Standard
+The connections between regions go beyond neighborhood effects in an integrated
+ economy.
+ There are many other channels such as physical infrastructure that allow
+ workers to commute (by car, by train, by plane, etc.) to another region.
+ Therefore, regions with higher connections are more important than regions
+ with fewer connections to model a specific unit.
+ 
+\end_layout
+
+\begin_layout Standard
+Consequently, the importance of region 
+\begin_inset Formula $j$
+\end_inset
+
+ to region 
+\begin_inset Formula $i$
+\end_inset
+
+ will be a function of the connections between them, and the weight matrix
+ will be a based on the number of connections between the regions.
+ 
+\end_layout
+
+\begin_layout Section
+Database Description and Model Specification 
+\end_layout
+
+\begin_layout Standard
+The labor market interacts with the macroeconomic environment through many
+ channels.
+ One of these channels is the level of economic activity.
+ Industrial production is used as a proxy to economic activity.
+ It is highly correlated to the gross domestic product (GDP) but available
+ at a higher frequency level.
+ The first is available quarterly whereas the latter is available monthly.
+\end_layout
+
+\begin_layout Standard
+Finally, an attempt to model the Brazilian labor market at the municipality
+ level was made but then discarded.
+ Brazil had a total of 5,564 municipalities in 2005 according to IBGE.
+ This government institute grouped municipalities into 137 mesoregions and
+ 27 states.
+ Many municipalities were merged or split, and thus it is difficult to construct
+ a long time series.
+ Therefore, we opt to work at the mesoregional level.
+\end_layout
+
+\begin_layout Subsection
+Database
+\end_layout
+
+\begin_layout Standard
+Table 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "tab:table1"
+
+\end_inset
+
+ contains a detailed description of the data sources.
+ The following section provides a brief description of the data used in
+ this study as well as their sources and frequency.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float table
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+%
+\backslash
+centering
+\end_layout
+
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Tabular
+<lyxtabular version="3" rows="8" columns="4">
+<features booktabs="true" tabularvalignment="middle">
+<column alignment="none" valignment="top" width="14.5em">
+<column alignment="none" valignment="top" width="5.215em">
+<column alignment="none" valignment="top" width="5.145em">
+<column alignment="none" valignment="top" width="9.43em">
+<row>
+<cell alignment="none" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+Data
+\series default
+ 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="none" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+Source
+\series default
+ 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="none" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+Frequency
+\series default
+ 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="none" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+Period
+\series default
+ 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="none" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Brazilian industrial production 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="none" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+IBGE (1) 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="none" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Monthly 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="none" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+2004-01 to 2016-12 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="none" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Employment and unemployment 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="none" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+CAGED (2) 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="none" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Monthly 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="none" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+2004-01 to 2016-12 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="none" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Mesoregions and municipalities 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="none" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+IBGE (1) 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="none" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+N/A 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="none" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+as reported in 2015 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="none" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Connection between regions 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="none" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+IBGE (1) 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="none" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+N/A 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="none" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+as of 2007 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell multicolumn="1" alignment="left" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+Source: elaborated by the author
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" topline="true" bottomline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell multicolumn="1" alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+(1) Brazilian Institute of Geography and Statistics
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell multicolumn="1" alignment="left" valignment="top" usebox="none" width="15cm">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+(2) Ministry of Labor and Employment through the General Records of Employed
+ and Unemployed Persons
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Data sources and characteristics
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "tab:table1"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Data for the Brazilian industrial production were obtained from IBGE.
+ The employment and unemployment records, which indicate the workers admitted
+ to and discharged from the labor market, were obtained from CAGED.
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+Initials come from 
+\begin_inset Quotes eld
+\end_inset
+
+Cadastro Geral de Empregados e Desempregados
+\begin_inset Quotes erd
+\end_inset
+
+.
+ 
+\end_layout
+
+\end_inset
+
+ The data were obtained at the municipality level and grouped by mesoregions.
+ The frequency of the data is monthly starting from January 2004 to December
+ 2016.
+\end_layout
+
+\begin_layout Standard
+The mesoregions' definitions, as well as information on the total population,
+ microregions, mesoregions, states, and their designation codes, were obtained
+ from IBGE as reported in 2015.
+\end_layout
+
+\begin_layout Subsection
+Descriptive statistics
+\end_layout
+
+\begin_layout Standard
+Table 2 shows descriptive statistics for the industrial production as well
+ as the admitted and disconnected series for mesoregions that contain the
+ cities of São Paulo, Rio de Janeiro, and Brasilia ‒ three of the most important
+ cities in Brazil.
+ The descriptive statistics for all the regions can be found in the appendices.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float table
+placement htbp
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Tabular
+<lyxtabular version="3" rows="10" columns="10">
+<features booktabs="true" tabularvalignment="middle">
+<column alignment="none" valignment="top" width="4.215em">
+<column alignment="left" valignment="top">
+<column alignment="right" valignment="top">
+<column alignment="right" valignment="top">
+<column alignment="right" valignment="top">
+<column alignment="right" valignment="top">
+<column alignment="right" valignment="top">
+<column alignment="right" valignment="top">
+<column alignment="right" valignment="top">
+<column alignment="right" valignment="top">
+<row>
+<cell alignment="none" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+\size scriptsize
+Region
+\series default
+ 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+\size scriptsize
+Series Name
+\series default
+ 
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="1" alignment="none" valignment="top" topline="true" usebox="none" special="l">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+\size scriptsize
+Mean
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="1" alignment="none" valignment="top" topline="true" usebox="none" special="l">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+\size scriptsize
+Median
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="1" alignment="none" valignment="top" topline="true" usebox="none" special="l">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+\size scriptsize
+Max
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="1" alignment="none" valignment="top" topline="true" usebox="none" special="l">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+\size scriptsize
+Min
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="1" alignment="none" valignment="top" topline="true" usebox="none" special="p{4.215em}">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+\size scriptsize
+Std.
+ Dev.
+ 
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="1" alignment="none" valignment="top" topline="true" usebox="none" special="p{4.215em}">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+\size scriptsize
+Skewness
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="1" alignment="none" valignment="top" topline="true" usebox="none" special="p{4.215em}">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+\size scriptsize
+Kurtosis
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="1" alignment="none" valignment="top" topline="true" usebox="none" special="p{4.215em}">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\series bold
+\size scriptsize
+Jarque-Bera
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="none" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size scriptsize
+Global 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size scriptsize
+Ind.
+ Prod.
+ 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="right" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size scriptsize
+4.5503 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="right" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size scriptsize
+4.5502 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="right" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size scriptsize
+4.7238 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="right" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size scriptsize
+4.3041 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="right" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size scriptsize
+0.0963 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="right" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size scriptsize
+-0.3792 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="right" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size scriptsize
+2.59 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="right" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size scriptsize
+4.7326 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="none" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size scriptsize
+SP - Metropol Sao Paulo 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size scriptsize
+Admitted 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="right" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size scriptsize
+226073 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="right" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size scriptsize
+223610.5 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="right" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size scriptsize
+329823 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="right" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size scriptsize
+115254 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="right" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size scriptsize
+55443.5 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="right" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size scriptsize
+-0.0856 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="right" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size scriptsize
+1.7569 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="right" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size scriptsize
+9.8751 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="none" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size scriptsize
+SP - Metropol Sao Paulo 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size scriptsize
+Discharged
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="right" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size scriptsize
+212768.2 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="right" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size scriptsize
+217592 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="right" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size scriptsize
+298117 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="right" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size scriptsize
+107413 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="right" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size scriptsize
+56594.5 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="right" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size scriptsize
+-0.307 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="right" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size scriptsize
+1.8034 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="right" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size scriptsize
+11.4459 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="none" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size scriptsize
+RJ - Metropol do RJ 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size scriptsize
+Admitted 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="right" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size scriptsize
+95295.5 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="right" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size scriptsize
+94490 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="right" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size scriptsize
+140206 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="right" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size scriptsize
+56900 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="right" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size scriptsize
+22461.6 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="right" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size scriptsize
+0.1119 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="right" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size scriptsize
+1.7417 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="right" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size scriptsize
+10.2581 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="none" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size scriptsize
+RJ - Metropol do RJ 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size scriptsize
+Discharged 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="right" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size scriptsize
+90694.9 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="right" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size scriptsize
+92642.5 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="right" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size scriptsize
+141759 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="right" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size scriptsize
+51785 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="right" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size scriptsize
+23537.8 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="right" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size scriptsize
+-0.0474 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="right" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size scriptsize
+1.7966 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="right" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size scriptsize
+9.1128 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="none" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size scriptsize
+GO - Distrito Federal 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size scriptsize
+Admitted 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="right" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size scriptsize
+22942.6 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="right" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size scriptsize
+22685.5 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="right" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size scriptsize
+36420 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="right" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size scriptsize
+12557 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="right" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size scriptsize
+5643.1 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="right" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size scriptsize
+0.0728 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="right" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size scriptsize
+1.738 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="right" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size scriptsize
+10.1272 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="none" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size scriptsize
+GO - Distrito Federal 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="left" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size scriptsize
+Discharged
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="right" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size scriptsize
+22068.6 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="right" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size scriptsize
+22648.5 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="right" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size scriptsize
+33552 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="right" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size scriptsize
+10988 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="right" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size scriptsize
+5931.7 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="right" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size scriptsize
+-0.1269 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="right" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size scriptsize
+1.7852 
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="right" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size scriptsize
+9.6577 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell multicolumn="1" alignment="left" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size scriptsize
+Source: elaborated by the author
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" topline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell multicolumn="1" alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size scriptsize
+Note: The data for the industrial production are presented at log level.
+ SP denotes São Paulo State,RJ denotes Rio de Janeiro and GO denotes Goiás.
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Descriptive statistics of the variables
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "tab:table2"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+All models were estimated using MatLab software R2016b and GVAR Toolbox
+ 2.0.
+ The following MatLab add-ons were installed during the estimation of the
+ models: Mapping Toolbox version 4.4, Econometrics Toolbox version 3.5, Optimizati
+on Toolbox version 7.5, and Statistics and Machine Learning Toolbox version
+ 11.0.
+ 
+\end_layout
+
+\begin_layout Subsection
+Global vector autoregressive model specification
+\end_layout
+
+\begin_layout Standard
+The objective of this study is to use the GVAR methodology, as described
+ in the previous section, to assess the Brazilian labor market model.
+ Each Brazilian mesoregion will be a GVAR unit.
+\end_layout
+
+\begin_layout Standard
+Since the labor market model consists of workers admitted to and discharged
+ from the labor market, the specific model for each mesoregion will contain
+ information of those admitted to and discharged from the labor market in
+ period 
+\shape italic
+t
+\shape default
+ for that region.
+ Therefore, for each mesoregion 
+\shape italic
+i
+\shape default
+ a vector 
+\begin_inset Formula $x_{it}$
+\end_inset
+
+ can be defined as
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+x_{i,t}=\begin{bmatrix}Adm_{i,t}\\
+Dis_{i,t}
+\end{bmatrix},
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+where 
+\begin_inset Formula $Adm_{i,t}$
+\end_inset
+
+ is the number of workers admitted (employment flow) to the labor market
+ in period 
+\begin_inset Formula $t$
+\end_inset
+
+ in region 
+\begin_inset Formula $i$
+\end_inset
+
+, and 
+\begin_inset Formula $Dis_{i,t}$
+\end_inset
+
+ is the number of workers disconnected (unemployment flow) from the labor
+ market in period 
+\begin_inset Formula $t$
+\end_inset
+
+ in region 
+\begin_inset Formula $i$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Each region experiences influences from other regions.
+ Using the GVAR methodology, the foreign variables are defined as a vector
+ 
+\begin_inset Formula $x_{i,t}^{*}$
+\end_inset
+
+ as follows:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+Adm_{i,t}^{*}=\sum_{j=1}^{N}W_{ij}Adm_{j,t},
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+Dis_{i,t}^{*}=\sum_{j=1}^{N}W_{ij}Dis_{j,t},
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+x_{i,t}^{*}=\begin{bmatrix}Adm_{i,t}^{*}\\
+Dis_{i,t}^{*}
+\end{bmatrix},
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+where 
+\begin_inset Formula $W_{ij}$
+\end_inset
+
+ is a link matrix that captures how much region 
+\begin_inset Formula $j$
+\end_inset
+
+ influences region 
+\begin_inset Formula $i$
+\end_inset
+
+; 
+\begin_inset Formula $Adm_{i,t}^{*}$
+\end_inset
+
+ is the influence on region 
+\begin_inset Formula $i$
+\end_inset
+
+ of the number of workers admitted to the labor market in other regions
+ in period 
+\begin_inset Formula $t$
+\end_inset
+
+; and 
+\begin_inset Formula $Dis_{i,t}^{*}$
+\end_inset
+
+ is the influence in region 
+\begin_inset Formula $i$
+\end_inset
+
+ of the number of workers disconnected from the labor market in other regions
+ in period 
+\begin_inset Formula $t$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Standard
+The specific models are defined with unrestricted intercepts and no trend
+ coefficients.
+ It is worth mentioning that even though a deterministic trend is not included
+ in the model, the levels of the domestic variables may be trended due to
+ the drift coefficients.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+x_{i,t}=a_{i0}+\sum_{j=1}^{k_{1,i}}\Phi_{ij}x_{i,t-j}+\Lambda_{i0}x_{i,t}^{*}+\sum_{l=1}^{k_{2,i}}\Lambda_{il}x_{i,t-l}^{*}+u_{i,t}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+where 
+\begin_inset Formula $k_{1,i}$
+\end_inset
+
+ and 
+\begin_inset Formula $k_{2,i}$
+\end_inset
+
+ are the lag order for the domestic variables and foreign variables respectively.
+ The model is defined with a maximum two lag order for domestic and foreign
+ variables, where the lag selection for each region will be done by the
+ GVAR Toolbox using the Akaike information criteria.
+ 
+\end_layout
+
+\begin_layout Subsection
+Macroeconomic dynamics
+\end_layout
+
+\begin_layout Standard
+In the GVAR model, macroeconomic variables are treated as common variables
+ and modeled in a dominant unit.
+ Therefore, the dominant unit of the GVAR model will contain the log level
+ of the Brazilian industrial production defined by the vector 
+\begin_inset Formula $ω_{t}$
+\end_inset
+
+, with a feedback variable from the regions through the aggregate values
+ of employment and unemployment.
+ So, the dominant unit will be a univariate model defined in first differences
+ with a trend included in the levels, and it can be expressed as
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+ω_{t}=\begin{bmatrix}\log(IndProd_{t})\end{bmatrix},
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+Δω_{t}=Φ_{ω0}+\sum_{l=1}^{k_{1}}Φ_{ωl}Δω_{t-l}+\sum_{l=1}^{k_{2}}Λ_{ωl}Δx_{i,t-l}^{*}+η_{ωt},
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+where 
+\begin_inset Formula $Δx^{*}$
+\end_inset
+
+ is the feedback variable containing the aggregate values of employment
+ and unemployment from all regions; 
+\begin_inset Formula $k_{1}$
+\end_inset
+
+ and 
+\begin_inset Formula $k_{2}$
+\end_inset
+
+ are the lag orders for the global variable (industrial production) and
+ feedback variables, respectively.
+ The maximum lag order is defined as three for both the global variable
+ and feedback variables, where the lag selection for each variable will
+ be set by the GVAR Toolbox using Akaike information criteria.
+ 
+\end_layout
+
+\begin_layout Section
+Results
+\end_layout
+
+\begin_layout Standard
+Modeling a system such as the Brazilian labor market at the mesoregion level
+ is naturally subject to considerable uncertainties.
+ There are many choices to be made for each individual mesoregion model,
+ for example, about the variables to be included in the specific models,
+ lag order of the domestic variables, lag order of the foreign variables,
+ number of cointegrating relations, and whether to impose long-run and short-run
+ restrictions on the parameters.
+\end_layout
+
+\begin_layout Standard
+As explained earlier, the GVAR model comprises several specific models,
+ solved in a two-step process.
+ The model is defined using the data for admissions and discharges for every
+ mesoregion as well as the weight matrix defined previously.
+ All regions were set to be affected by the foreign variable and dominant
+ unit.
+ 
+\end_layout
+
+\begin_layout Standard
+The final model was estimated using the GVAR automatic lag selection with
+ the Akaike information criterion and a maximum lag order of two for domestic
+ as well as foreign variables.
+ A total of 137 models were specified.
+ Lags for domestic variables were set to two in 98 models and to one in
+ the other 39 models.
+ The lags for foreign variables were set to two in 91 models and to one
+ in the other 46 models.
+\end_layout
+
+\begin_layout Standard
+Existence of cointegration among variables was investigated using an automated
+ procedure of GVAR Toolbox 2.0.
+ All individual models had the deterministic components treated as an unrestrict
+ed intercept and no trend in the error correction models.
+ Out of the 137 estimated models, nine were specified with one cointegration
+ relationship, and 128 models were specified with two cointegration relationship
+s.
+\end_layout
+
+\begin_layout Standard
+The GVAR model determines a model for each region considering foreign effects
+ as well as effects from the variables in the dominant unit model.
+ With no overidentifying restrictions imposed, the final model proved to
+ be stable with 815 eigenvalues lying inside the unit circle, 10 of which
+ were lying on the unit circle.
+ 
+\end_layout
+
+\begin_layout Subsection
+Forecast exercise
+\end_layout
+
+\begin_layout Standard
+Using the GVAR methodology, it is possible to estimate the dynamic response
+ of unemployment and employment in each region, considering not only the
+ industrial production but also the interdependence of each region.
+ With the use of conditional forecasts, it is possible to evaluate the behavior
+ of the labor market in response to a change in the global economy, which
+ in our case is represented by the industrial production.
+ Therefore, a series of conditional forecasts for different growth scenarios
+ of industrial production were made to assess the impact of the industrial
+ production on the labor market.
+ The series of conditional forecasts of the labor market consist of a base
+ scenario and several other growth scenarios for the Brazilian industrial
+ production.
+\end_layout
+
+\begin_layout Standard
+The baseline scenario for industrial production growth will have 0% growth
+ coefficient over the last year in the series, in this case, 2016.
+ The other growth scenarios on the set will have 2% growth coefficient,
+ 4% growth coefficient, 6% growth coefficient, and 8% growth coefficient
+ over the last year.
+\end_layout
+
+\begin_layout Standard
+The industrial production growth is determined by applying the annual growth
+ coefficient in each month compared with that of the last year.
+ In other words, a 2% growth coefficient means a 2% grow in January 2016
+ compared to January 2017 and so on.
+ All the scenarios were analyzed over an eight-year forecast.
+\end_layout
+
+\begin_layout Subsubsection
+Forecast, net employment, and accumulated employment
+\end_layout
+
+\begin_layout Standard
+\begin_inset Quotes eld
+\end_inset
+
+Net employment gain
+\begin_inset Quotes erd
+\end_inset
+
+ is defined as the difference between admissions minus discharges.
+ In addition “total net employment mesoregion gain” is defined as the sum
+ of the net employment gain for every municipality of the mesoregion.
+ Consequently, as the forecast exercise started in January 2017, the cumulative
+ employment gain is the sum of all the previous “total net employment” until
+ that year.
+ The total cumulative employment is an aggregate of all mesoregions and
+ can be used to evaluate how the Brazilian labor market will behave in different
+ macroeconomic scenarios in terms of changes in stocks of employment.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Tabular
+<lyxtabular version="3" rows="3" columns="1">
+<features tabularvalignment="middle">
+<column alignment="left" valignment="top">
+<row>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename Figures/Figure1.png
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+Source: elaborated by the author
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+Note: 2015-2016 deficit: The net employment deficit accumulated from 2015
+ through 2016
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Brazilian accumulated employment forecast for different growth scenarios
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+From 2015 through 2016, the total net employment gain is -3 million because
+ Brazilian economy was facing a deep recession.
+ Taking December 2016 as reference, the baseline forecasts reveal that a
+ 0% annual growth for industrial production would imply a great loss of
+ formal employment.
+ If industrial production starts to recover at the rate of 2% annual growth,
+ then the net gain will become positive only about September of 2021.
+ At the end of the forecast horizon period, a cumulative gain of 2.5 million
+ net jobs will be created.
+ A 4% annual growth in the industrial production would cause significant
+ improvement to the cumulative net employment gain with the first positive
+ net gain of the series occurring in September 2017, and the cumulative
+ gain of employment will be 6.5 million by the end of 2024.
+ For 6% and 8% annual growth, cumulative gain will become positive in June
+ 2017, and it will have a value of 10.5 million and 14.5 million, respectively,
+ by the end of the forecast period.
+ It is worth mentioning that 4% annual growth in the industrial production
+ would compensate for the Brazilian cumulative net employment deficit from
+ 2015 to 2016 only in July 2022.
+ 
+\end_layout
+
+\begin_layout Subsection
+Industrial production elasticity by region
+\end_layout
+
+\begin_layout Standard
+The net employment defined in the last section can be interpreted as the
+ variation on the total employment level.
+ To normalize the value we divide each variable by total population of each
+ mesoregion.
+ This gives an idea about the dynamics of each region.
+ It would be better to have an estimate of labour force, but this is not
+ available.
+ Therefore, changes in the employment rate used in this study are a proxy
+ of employment rate creation.
+\end_layout
+
+\begin_layout Standard
+Since the GVAR methodology allows for a forecast for each region, it is
+ possible to map changes of the employment rate for every region, where
+ the cumulative changes are the sum of all previous variations.
+ Therefore, it is possible to evaluate how a change in the industrial production
+ affects the labor market in each region; in other words, it is possible
+ to establish the employment elasticity with respect to the industrial productio
+n.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Tabular
+<lyxtabular version="3" rows="3" columns="2">
+<features booktabs="true" tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename Figures/Figure2-a.png
+	width 8cm
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename Figures/Figure2-b.png
+	width 8cm
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename Figures/Figure2-c.png
+	width 8cm
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename Figures/Figure2-d.png
+	width 8cm
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell multicolumn="1" alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+Source: elaborated by the authors
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Accumulated employment rate variation for various industrial production
+ growth scenarios
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Data on each mesoregion are grouped into five Brazilian regions: North,
+ Northeast, Southeast, South and Centralwest.
+ Taking the IBGE's estimated population for 2016 as the total population,
+ and 0% growth as a base scenario, it is possible to obtain the industrial
+ production elasticity of employment for each major region over an eight-year
+ forecast period.
+ Considering a 2% annual growth in the industrial production, the South
+ region is the most sensitive with 0.18 elasticity; the second most sensitive
+ region is the Northeast with 0.15 elasticity.
+ The Southeast region has 0.10 elasticity, while the least sensitive major
+ regions are the North and Centralwest, each with 0.06 elasticity.
+\end_layout
+
+\begin_layout Standard
+This indicates that the Northeast and South regions have higher elasticity,
+ being strongly affected by changes in industrial production.
+ The Southeast region, which is the most developed, has intermediate elasticity.
+ This is probably due to the high development level of the region, making
+ its marginal gain not as high as in the Northeast and South regions.
+\end_layout
+
+\begin_layout Standard
+Although previous analysis was conducted in macroregions, the GVAR methodology
+ allows us to conduct the same analysis at a more in-depth level.
+ Since the GVAR equations are solved for every region, we can evaluate elasticit
+y for not only the state but also for every mesoregion.
+\end_layout
+
+\begin_layout Standard
+Figure 3 shows the estimated employment rate change for the Southeast region,
+ the most developed in the country.
+ Using 0% growth as a base scenario, elasticity for the states of Minas
+ Gerais, Espírito Santo, Rio de Janeiro, and São Paulo are estimated.
+ Again, considering a 2% annual growth in industrial production, Rio de
+ Janeiro is the most sensitive state with 0.19 elasticity, followed by Espírito
+ Santo with a 0.09 elasticity.
+ Minas Gerais and São Paulo are estimated to have elasticity of 0.07 and
+ 0.08, respectively.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Tabular
+<lyxtabular version="3" rows="4" columns="2">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename Figures/Figure3-a.png
+	width 8cm
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename Figures/Figure3-b.png
+	width 8cm
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename Figures/Figure3-c.png
+	width 8cm
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename Figures/Figure3-d.png
+	width 8cm
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell multicolumn="1" alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+Source: elaborated by the author
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell multicolumn="1" alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+Mg: Minas Gerais; Es: Espírito Santo; Rj: Rio de Janeiro; Sp: São Paulo.
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Accumulated employment rate variation for various industrial production
+ growth scenarios on state level.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+As mentioned earlier, with the GVAR model, it is possible to evaluate every
+ region in a more in-depth analysis.
+ Since listing all 137 regions' estimated elasticity would be impractical,
+ the region of São Paulo metropolitan area (one of the most important in
+ the country) is compared with four other randomly selected regions: Goiás
+ Central region, Borborema region, Jequitinhonha region, and Porto Alegre
+ metropolitan area.
+ Goiás Central region is the most rich and densely populated mesoregion
+ of the Goiás state, with 3.1 million inhabitants.
+ The mesoregion of Borborema is dry land, with approximately 310,000 inhabitants.
+ The Jequitinhonha Valley region is known for its low social indicators.
+ It has 731,000 inhabitants.
+ Porto Alegre metropolitan area is an important region in the South and
+ its economy is strongly influenced by the industrial sector 5 million inhabitan
+ts.
+\end_layout
+
+\begin_layout Standard
+Figure 4 shows the estimated elasticity for the regions.
+ As previously mentioned, 0% growth is used as a base scenario for the elasticit
+y.
+ With the scenario of 2% annual growth in industrial production, Porto Alegre
+ is the most sensitive mesoregion with 0.19 elasticity, followed by São Paulo
+ with 0.16 elasticity.
+ The Goiás central area has a moderate elasticity with a value of 0.07.
+ Lastly, the Borborema and Jequitinhonha mesoregions proved to be very inelastic
+, with only 0.02 elasticity.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Tabular
+<lyxtabular version="3" rows="5" columns="2">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename Figures/Figure4-a.png
+	width 8cm
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename Figures/Figure4-b.png
+	width 8cm
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename Figures/Figure4-c.png
+	width 8cm
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename Figures/Figure4-d.png
+	width 8cm
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell multicolumn="1" alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+Source: elaborated by the author 
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell multicolumn="1" alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+C.Go: Goiás central area; Borb: Borborema; Jequit: Jequitinhonha;
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell multicolumn="1" alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+ P.Alegre: Porto Alegre metropolitan area; SP: São Paulo metropolitan area
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\align left
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Cumulative employment rate changes for various industrial production growth
+ scenarios on mesoregion level.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+The most populated mesoregions in Brazil are São Paulo metropolitan area,
+ Rio de Janeiro metropolitan area, Belo Horizonte metropolitan area, Porto
+ Alegre metropolitan area, and Salvador metropolitan area.
+ According to IBGE in 2017, Rio de Janeiro metropolitan area has approximately
+ 12.9 million inhabitants, and Belo Horizonte metropolitan area has approximately
+ 6.7 million inhabitants, and Salvador metropolitan area has around 4.7 million
+ inhabitants.
+\end_layout
+
+\begin_layout Standard
+Figure 5 shows the estimated elasticity for the most populated mesoregions
+ in Brazil.
+ As before, 0% growth is used as a base scenario for the elasticity.
+ With the scenario of 2% annual growth in industrial production, the metropolita
+n areas of Rio de Janeiro and Porto Alegre are the most sensitive mesoregions
+ with 0.19 elasticity.
+ Belo Horizonte and São Paulo have elasticity of 0.17 and 0.16, respectively.
+ Lastly, the metropolitan area of Salvador has 0.11 elasticity.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Tabular
+<lyxtabular version="3" rows="5" columns="2">
+<features tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename Figures/Figure5-a.png
+	width 8cm
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename Figures/Figure5-b.png
+	width 8cm
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename Figures/Figure5-c.png
+	width 8cm
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename Figures/Figure5-d.png
+	width 8cm
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell multicolumn="1" alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+Source: elaborated by the author 
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell multicolumn="1" alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+Salvador: Salvador metropolitan area; Rio Jan: Rio de Janeiro metropolitan
+ area; P.Alegre: Porto Alegre metropolitan area;
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell multicolumn="1" alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+ B.Horizon.: Belo Horizonte metropolitan area SP: São Paulo metropolitan area
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Accumulated employment rate variation for various industrial production
+ growth scenarios on mesoregion level – Most populated mesoregions.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Regional dynamics
+\end_layout
+
+\begin_layout Standard
+One advantage of the GVAR methodology is the ability to detect dynamic interacti
+ons between the regions in the model.
+ In other words, the GVAR model can provide a forecast with the dynamics
+ of each region.
+ Consequently, the final analysis of our study evaluates the interactions
+ among the regions in different scenarios.
+\end_layout
+
+\begin_layout Standard
+We discuss the dynamics of employment in four scenarios for up to seven
+ years ahead.
+ The initial period is December of 2016.
+ Scenarios to be compared are 0% growth (baseline), 2% growth, and 4% growth
+ in industrial production, and the forecast horizons will be one year, three
+ years, five years, and seven years ahead.
+\end_layout
+
+\begin_layout Standard
+It is expected that the most populated areas will have higher number of
+ admissions and discharges, or higher net employment, than less populated
+ areas.
+ Therefore, to account for the total population in the region, the comparison
+ between the regions will be made using the previously defined employment
+ rate.
+\end_layout
+
+\begin_layout Standard
+By using the GVAR methodology and comparing the accumulated employment rate,
+ it is possible to determine not only how the employment rate in each region
+ reacts to a variation in industrial production, but also dynamics of the
+ regions' interactions.
+ The South, Southeast, and Northeast regions proved to be very dynamic,
+ displaying constant interaction within its regions, while the North and
+ Central regions appeared to be little influenced by neighboring regions.
+\end_layout
+
+\begin_layout Standard
+As shown in Figure 6, the 0% growth scenario shows almost no improvement
+ in the individual regions.
+ In December 2017, this scenario has 112 mesoregions, which show negative
+ net employment.
+ In December 2023, only 28 regions develop a positive balance of employment,
+ and 84 mesoregions still show negative net employment (the 84 regions are
+ divided as follows: North: 15; Northeast: 33; Southeast: 16; South: 14;
+ and Centralwest: 6).
+ The 2% growth scenario shows some improvement over the 0% growth, with
+ only 41 mesoregions having negative net employment in December 2023 (North:
+ 14; Northeast: 18; Southeast: 6; South: 1; and Centralwest: 2).
+ Finally, the 4% growth scenario shows significant improvement; only 13
+ among all 137 mesoregions have negative net employment by December 2023
+ (North: 6; Northeast: 3; Southeast: 2; South: 1; and Centralwest: 1).
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Tabular
+<lyxtabular version="3" rows="3" columns="1">
+<features tabularvalignment="middle">
+<column alignment="left" valignment="top">
+<row>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename Figures/Figure6.png
+	width 16cm
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="left" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+Source: elaborated by the author.
+ 
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\size footnotesize
+Original data from: CAGED
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+Dynamic comparison of the accumulated employment rate between different
+ growth scenarios
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Limitations and possible extensions
+\end_layout
+
+\begin_layout Standard
+This work can be expanded in many forms.
+ First, a more comprehensive macroeconomic model can be formulated and different
+ types of macroeconomic shocks can be identified and their impact simulated.
+ Second, it is possible to construct a 
+\begin_inset Quotes eld
+\end_inset
+
+tailor-made
+\begin_inset Quotes erd
+\end_inset
+
+ GVAR.
+ Each individual model can be estimated using recently developed techniques
+ for model selection such as autometrics ( 
+\begin_inset CommandInset citation
+LatexCommand citealp
+key "hendry2014empirical"
+literal "true"
+
+\end_inset
+
+).
+ This route was explored by 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "ericsson2012evaluating"
+literal "true"
+
+\end_inset
+
+ but not in a regional model.
+ It is also possible to disagregate data by not only regions but also sectors
+ such as agriculture, industry and services among others.
+ 
+\end_layout
+
+\begin_layout Standard
+Another possible path of research consists of evaluating predictive performance
+ at different aggregate levels and horizons against simple benchmarks such
+ as random walk or first order autoregressive model.
+ 
+\end_layout
+
+\begin_layout Section
+Conclusion
+\end_layout
+
+\begin_layout Standard
+The initial purpose of this study was twofold: first, creating a model of
+ the Brazilian labor market at a regional level using the GVAR methodology,
+ as proposed by 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "pesaran2004modeling"
+literal "true"
+
+\end_inset
+
+ and second, using the developed model to estimate the regional elasticity
+ of employment with respect to the economic activity of the country while
+ identifying the dynamics of the regions as well as inferring on the effects
+ of the global variables on the labor market.
+\end_layout
+
+\begin_layout Standard
+The increasing integration of the Brazilian territory has generated great
+ interdependence among its regions.
+ This interdependence plays a key role in the modeling and analysis of the
+ markets.
+ Therefore, macroeconomic analyses should consider the existence of a correlatio
+n not only between local and global variables but also with variables from
+ other regions through this interdependence channel.
+\end_layout
+
+\begin_layout Standard
+In this scenario, the GVAR methodology, developed by 
+\begin_inset CommandInset citation
+LatexCommand citet
+key "pesaran2004modeling"
+literal "true"
+
+\end_inset
+
+, plays a leading role in the modeling of the labor market, since it accounts
+ for the interdependence and connections between economies and regions.
+ Therefore, if the assumptions of weak exogeneity are maintained, it is
+ possible to use the GVAR to construct a simple and practical model for
+ the labor market.
+\end_layout
+
+\begin_layout Standard
+We document the existence of a cointegration relationship between regions
+ using our indicator of economic linkage that goes beyond neighborhood effects.
+ Using GVAR model we are able to consolidate all interdependence between
+ regions in a comprehensive manner.
+ The model can be used to simulate the evolution of employment under different
+ macroeconomic scenarios and unveil and quantify linkages across regions.
+\end_layout
+
+\begin_layout Standard
+Thus, using the previously estimated model, several forecast scenarios for
+ the labor market are analyzed, leading to the assessment of a situation
+ in which industrial production remains at the current level.
+ In other words, for the 0% annual growth coefficient, the labor market
+ will keep a negative employment balance, meaning that the economy will
+ remain in recession at least for the next eight years.
+ On the other hand, 2% annual growth of the industrial production shows
+ significant improvement in the accumulated net employment leading to positive
+ accumulated balance of 2.5 million employment positions for an eight year
+ forecast.
+ Higher growth scenarios (4%, 6%, and 8% annual coefficients) also show
+ higher accumulated employment.
+ Therefore, an increase in industrial production affects the labor market
+ in a positive correlation, as expected according to the macroeconomic theory.
+\end_layout
+
+\begin_layout Standard
+Focusing the main regions in Brazil ─ North, Northeast, Southeast, South,
+ and Centralwest ─ and using the forecast scenarios, it was possible to
+ estimate the elasticity of employment in relation to industrial production
+ for each major region.
+ The most sensitive region is the South followed by the Northeast; they
+ have elasticity of 0.18 and 0.16, respectively.
+ The Southeast, the country’s most developed region, has intermediate elasticity
+, whereas the North and Central regions have the lowest elasticity.
+\end_layout
+
+\begin_layout Standard
+Finally, results from the model suggest a rich dynamic relationship among
+ mesoregions.
+ The South, Southeast, and Northeast are quite dynamic regions and present
+ higher level of interaction, whereas in the North and Centralwest regions,
+ these links do not appear to be strong.
+\end_layout
+
+\begin_layout Standard
+Finally, our study suggests that the GVAR methodology can give good insights
+ about the dynamics of formal labor employment and deal with the curse of
+ dimensionality in a manageable form.
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset bibtex
+LatexCommand bibtex
+bibfiles "Modelling Brazilian Regional Formal Labor Market Using Global VAR Approach"
+options "bibtotoc,plainnat"
+
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document

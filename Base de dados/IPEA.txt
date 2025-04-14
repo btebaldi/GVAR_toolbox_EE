@@ -1,0 +1,26 @@
+Produção industrial - indústria geral: índice de quantum (média 2012 = 100) 
+Frequência: Mensal de 2002.01 até 2016.10
+Fonte: Instituto Brasileiro de Geografia e Estatística, Pesquisa Industrial Mensal - Produção Física (IBGE/PIM-PF)
+Unidade: -
+Comentário: A partir de maio de 2014, tem início a divulgação da nova série de índices mensais da produção industrial, elaborados com base na Pesquisa Industrial Mensal de Produção Física (PIM-PF) reformulada.
+Atualizado em: 05/12/2016
+
+
+Produção industrial da indústria geral: índice de quantum (média 2002 = 100) 
+Frequência: Mensal de 1975.01 até 2014.02
+Fonte: Instituto Brasileiro de Geografia e Estatística, Pesquisa Industrial Mensal - Produção Física - antiga metodologia (IBGE/PIM-PF antiga)
+Unidade: -
+Comentário: A partir de janeiro de 1991, houve uma reformulação da série para se adequar a nova metodologia da PIM-PF. A unificação das duas séries, antes e depois de 1991, foi feita por uma regra de três simples tomando-se como base o mês de janeiro de 1991. Série descontinuada pela fonte.
+Atualizado em: 03/04/2014
+
+
+IPCA - geral - índice (dez. 1993 = 100)
+Frequência: Mensal de 1979.12 até 2016.11
+Fonte: Instituto Brasileiro de Geografia e Estatística, Sistema Nacional de Índices de Preços ao Consumidor (IBGE/SNIPC)
+Unidade: -
+Comentário: Índice Nacional de Preços ao Consumidor Amplo (IPCA). Obs.: O índice de agosto de 1991, excepcionalmente, foi calculado pelo IBGE como média geométrica dos valores observados em julho e setembro. Por isso, as taxas de variação apresentadas para agosto e setembro de 1991 são iguais.
+Atualizado em: 02/01/2017
+
+
+PIM
+ftp://ftp.ibge.gov.br/Industrias_Extrativas_e_de_Transformacao/Pesquisa_Industrial_Mensal_Producao_Fisica/Fasciculos/Fasciculo_Indicadores_IBGE_Brasil/

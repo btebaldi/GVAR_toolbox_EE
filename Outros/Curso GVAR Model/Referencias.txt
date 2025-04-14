@@ -1,0 +1,14 @@
+Shapefiles
+http://mapas.ibge.gov.br/bases-e-referenciais/bases-cartograficas/malhas-digitais.html
+
+ftp://geoftp.ibge.gov.br/organizacao_do_territorio/malhas_territoriais/malhas_municipais/municipio_2015/Brasil/BR/
+
+
+
+
+QGIS
+http://www.qgis.org/en/site/
+
+
+
+http://www.qgistutorials.com/en/docs/performing_table_joins.html

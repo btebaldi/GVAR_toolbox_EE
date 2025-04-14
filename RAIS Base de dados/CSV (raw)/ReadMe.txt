@@ -1,0 +1,1 @@
+2020-05-01 - Este diretorio contem os aquivos originais que foram retirados da base de dados da RAIS "as is"

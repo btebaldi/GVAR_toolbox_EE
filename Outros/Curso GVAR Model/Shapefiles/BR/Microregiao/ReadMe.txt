@@ -1,0 +1,1 @@
+2025-04-14: Arquivos compactados para sincronia com GitHub. Para extrair os arquivos utilizar 7zip
