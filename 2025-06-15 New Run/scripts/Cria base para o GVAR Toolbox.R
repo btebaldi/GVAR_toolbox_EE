@@ -13,7 +13,7 @@ library(readxl)
 library(dplyr)
 library(tidyr)
 library(writexl)
-
+library(lubridate)
 
 # User defined Values -----------------------------------------------------
 
@@ -24,6 +24,7 @@ mFile <- "CAGED - Admt e Deslig - 2004-2024.xlsx"
 mAdmOutputFile <- "Adm_OutputFile.xlsx"
 mDesOutputFile <- "Des_OutputFile.xlsx"
 mPIMOutputFile <- "PIM_OutputFile.xlsx"
+mPIMForecastOutputFile <- "PIM_Forecast_OutputFile.xlsx"
 
 
 mPimFile1 <- "PIM ipeadata 2020-07-30.xlsx"
@@ -50,8 +51,8 @@ parseDateForGvar <- function(x){
 Data <- list("ALL" = NA, "Adm" = NA, "Des" = NA, PIM_2020 = NA, PIM_2025 = NA, PIM_ALL = NA)
 
 Data$ALL <- readxl::read_xlsx(mFile.fullPath, 
-                         sheet = "Admit-Deslig",
-                         range = "A2:SM5587")
+                              sheet = "Admit-Deslig",
+                              range = "A2:SM5587")
 # range = cell_limits(ul = c(NA, NA), lr = c(NA, NA)))
 Data$Adm <- Data$ALL[, c(1:254)]
 dim(Data$Adm)
@@ -75,18 +76,18 @@ CadastroMunicipios$Municipios <- readxl::read_xlsx(Cadastro_Municipios.path, she
 CadastroMunicipios$TabelaCompleta <-  dplyr::left_join(CadastroMunicipios$Municipios,
                                                        CadastroMunicipios$Microregioes,
                                                        by = c("ID_Micro"="ID_Micro") ) %>%
-                                      dplyr::left_join(CadastroMunicipios$Mesoregioes,
-                                                       by = c("ID_Meso"="ID_Meso") ) %>% 
-                                      dplyr::left_join(CadastroMunicipios$Estados,
-                                                       by = c("ID_UF"="ID_UF") ) %>%
-                                      dplyr::left_join(CadastroMunicipios$GrandeRegioes,
-                                                       by = c("ID_GR"="ID_GR") ) %>%
-                                      dplyr::select(ID_GR, Sigla_GR, Nome_GR,
-                                                    ID_UF, Sigla_UF, Nome_UF,
-                                                    ID_Meso, Nome_Mesorregiao, UF_NomeMesoregiao,
-                                                    ID_Micro, Nome_Microrregiao, UF_NomeMicroregiao,
-                                                    ID_Municipio, 
-                                                    ID_MunicipioNoDigit, Capital, Nome_Municipio, everything())
+  dplyr::left_join(CadastroMunicipios$Mesoregioes,
+                   by = c("ID_Meso"="ID_Meso") ) %>% 
+  dplyr::left_join(CadastroMunicipios$Estados,
+                   by = c("ID_UF"="ID_UF") ) %>%
+  dplyr::left_join(CadastroMunicipios$GrandeRegioes,
+                   by = c("ID_GR"="ID_GR") ) %>%
+  dplyr::select(ID_GR, Sigla_GR, Nome_GR,
+                ID_UF, Sigla_UF, Nome_UF,
+                ID_Meso, Nome_Mesorregiao, UF_NomeMesoregiao,
+                ID_Micro, Nome_Microrregiao, UF_NomeMicroregiao,
+                ID_Municipio, 
+                ID_MunicipioNoDigit, Capital, Nome_Municipio, everything())
 
 
 ShortNameOrder <- c("Ro1101", "Ro1102", "Ac1201", "Ac1202", "Am1301", "Am1302", "Am1303", "Am1304",
@@ -168,3 +169,49 @@ Data$PIM_ALL %>%
   dplyr::select(Date2, lpim_BR) %>% 
   dplyr::rename(date = Date2) %>% 
   writexl::write_xlsx(path = file.path(mDirPath, mPIMOutputFile) )
+
+
+# Forecasting PIM ---------------------------------------------------------
+
+PIM_fcast_1 <- tibble(h = 0:96,
+                      lPIM_2pc = NA,
+                      lPIM_4pc = NA,
+                      lPIM_6pc = NA,
+                      lPIM_8pc = NA)
+
+PIM_fcast_2 <- PIM_fcast_1
+
+# define growth rates
+tx_2pc <- log(1.02)*(1/12)
+tx_4pc <- log(1.04)*(1/12)
+tx_6pc <- log(1.06)*(1/12)
+tx_8pc <- log(1.08)*(1/12)
+
+# Defining forecast 1 (from 2016)
+cur_date <- as.Date("2016-12-01")
+idx <- which(Data$PIM_ALL$Data == cur_date)
+
+PIM_fcast_1 <- PIM_fcast_1 %>% 
+  dplyr::mutate(lPIM_2pc = log(Data$PIM_ALL$PIM[idx]) + tx_2pc*h,
+                lPIM_4pc = log(Data$PIM_ALL$PIM[idx]) + tx_4pc*h,
+                lPIM_6pc = log(Data$PIM_ALL$PIM[idx]) + tx_6pc*h,
+                lPIM_8pc = log(Data$PIM_ALL$PIM[idx]) + tx_8pc*h, 
+                date = lubridate::add_with_rollback(cur_date, months(h)))
+
+# Defining forecast 2 (from 2024)
+cur_date <- as.Date("2024-12-01")
+idx <- which(Data$PIM_ALL$Data == cur_date)
+
+PIM_fcast_2 <- PIM_fcast_2 %>% 
+  dplyr::mutate(lPIM_2pc = log(Data$PIM_ALL$PIM[idx]) + tx_2pc*h,
+                lPIM_4pc = log(Data$PIM_ALL$PIM[idx]) + tx_4pc*h,
+                lPIM_6pc = log(Data$PIM_ALL$PIM[idx]) + tx_6pc*h,
+                lPIM_8pc = log(Data$PIM_ALL$PIM[idx]) + tx_8pc*h, 
+                date = lubridate::add_with_rollback(cur_date, months(h)))
+
+
+tail(PIM_fcast_1)
+tail(PIM_fcast_2)
+
+writexl::write_xlsx(x = list("Fcast2016" = PIM_fcast_1, "Fcast2024" = PIM_fcast_2),
+                    path = file.path(mDirPath, mPIMForecastOutputFile) )
