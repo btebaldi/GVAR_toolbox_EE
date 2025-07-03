@@ -173,45 +173,103 @@ Data$PIM_ALL %>%
 
 # Forecasting PIM ---------------------------------------------------------
 
-PIM_fcast_1 <- tibble(h = 0:96,
+# Tabela com os forecasts condicionais
+PIM_fcast <- tibble(h = -11:96,
+                      date = as.Date(NA),
+                      lPIM_0pc = NA,
                       lPIM_2pc = NA,
                       lPIM_4pc = NA,
                       lPIM_6pc = NA,
                       lPIM_8pc = NA)
 
-PIM_fcast_2 <- PIM_fcast_1
+# define growth rates
+tx_2pc <- log(1.02)
+tx_4pc <- log(1.04)
+tx_6pc <- log(1.06)
+tx_8pc <- log(1.08)
+
+# Set current date
+cur_date <- as.Date("2016-12-01")
+
+# calculate the forecast dates for every horizon h
+PIM_fcast$date <- cur_date
+PIM_fcast <- PIM_fcast %>%
+  dplyr::mutate(date = lubridate::add_with_rollback(date, months(h)))
+
+# get the previous values
+idx_ini <- which(Data$PIM_ALL$Data == lubridate::add_with_rollback(cur_date, months(-11)))
+idx_fim <- which(Data$PIM_ALL$Data == cur_date)
+PIM_fcast$lPIM_0pc[1:12] <- log(Data$PIM_ALL$PIM[idx_ini:idx_fim])
+PIM_fcast$lPIM_2pc[1:12] <- log(Data$PIM_ALL$PIM[idx_ini:idx_fim])
+PIM_fcast$lPIM_4pc[1:12] <- log(Data$PIM_ALL$PIM[idx_ini:idx_fim])
+PIM_fcast$lPIM_6pc[1:12] <- log(Data$PIM_ALL$PIM[idx_ini:idx_fim])
+PIM_fcast$lPIM_8pc[1:12] <- log(Data$PIM_ALL$PIM[idx_ini:idx_fim])
+
+# Initialize the 0% forecast scenario
+for(i in 13:nrow(PIM_fcast)){
+  PIM_fcast$lPIM_0pc[i] <- PIM_fcast$lPIM_0pc[i-12]
+  PIM_fcast$lPIM_2pc[i] <- PIM_fcast$lPIM_2pc[i-12] + tx_2pc
+  PIM_fcast$lPIM_4pc[i] <- PIM_fcast$lPIM_4pc[i-12] + tx_4pc
+  PIM_fcast$lPIM_6pc[i] <- PIM_fcast$lPIM_6pc[i-12] + tx_6pc
+  PIM_fcast$lPIM_8pc[i] <- PIM_fcast$lPIM_8pc[i-12] + tx_8pc
+}
+
+PIM_fcast <- PIM_fcast %>% dplyr::filter(h >0)
+
+
+
+
+# Fazer previsoes fora da amostraa ----------------------------------------
+
+
+# Tabela com os forecasts condicionais
+PIM_fcast_2024 <- tibble(h = -11:96,
+                    date = as.Date(NA),
+                    lPIM_0pc = NA,
+                    lPIM_2pc = NA,
+                    lPIM_4pc = NA,
+                    lPIM_6pc = NA,
+                    lPIM_8pc = NA)
 
 # define growth rates
-tx_2pc <- log(1.02)*(1/12)
-tx_4pc <- log(1.04)*(1/12)
-tx_6pc <- log(1.06)*(1/12)
-tx_8pc <- log(1.08)*(1/12)
+tx_2pc <- log(1.02)
+tx_4pc <- log(1.04)
+tx_6pc <- log(1.06)
+tx_8pc <- log(1.08)
 
-# Defining forecast 1 (from 2016)
-cur_date <- as.Date("2016-12-01")
-idx <- which(Data$PIM_ALL$Data == cur_date)
-
-PIM_fcast_1 <- PIM_fcast_1 %>% 
-  dplyr::mutate(lPIM_2pc = log(Data$PIM_ALL$PIM[idx]) + tx_2pc*h,
-                lPIM_4pc = log(Data$PIM_ALL$PIM[idx]) + tx_4pc*h,
-                lPIM_6pc = log(Data$PIM_ALL$PIM[idx]) + tx_6pc*h,
-                lPIM_8pc = log(Data$PIM_ALL$PIM[idx]) + tx_8pc*h, 
-                date = lubridate::add_with_rollback(cur_date, months(h)))
-
-# Defining forecast 2 (from 2024)
+# Set current date
 cur_date <- as.Date("2024-12-01")
-idx <- which(Data$PIM_ALL$Data == cur_date)
 
-PIM_fcast_2 <- PIM_fcast_2 %>% 
-  dplyr::mutate(lPIM_2pc = log(Data$PIM_ALL$PIM[idx]) + tx_2pc*h,
-                lPIM_4pc = log(Data$PIM_ALL$PIM[idx]) + tx_4pc*h,
-                lPIM_6pc = log(Data$PIM_ALL$PIM[idx]) + tx_6pc*h,
-                lPIM_8pc = log(Data$PIM_ALL$PIM[idx]) + tx_8pc*h, 
-                date = lubridate::add_with_rollback(cur_date, months(h)))
+# calculate the forecast dates for every horizon h
+PIM_fcast_2024$date <- cur_date
+PIM_fcast_2024 <- PIM_fcast_2024 %>%
+  dplyr::mutate(date = lubridate::add_with_rollback(date, months(h)))
+
+# get the previous values
+idx_ini <- which(Data$PIM_ALL$Data == lubridate::add_with_rollback(cur_date, months(-11)))
+idx_fim <- which(Data$PIM_ALL$Data == cur_date)
+PIM_fcast_2024$lPIM_0pc[1:12] <- log(Data$PIM_ALL$PIM[idx_ini:idx_fim])
+PIM_fcast_2024$lPIM_2pc[1:12] <- log(Data$PIM_ALL$PIM[idx_ini:idx_fim])
+PIM_fcast_2024$lPIM_4pc[1:12] <- log(Data$PIM_ALL$PIM[idx_ini:idx_fim])
+PIM_fcast_2024$lPIM_6pc[1:12] <- log(Data$PIM_ALL$PIM[idx_ini:idx_fim])
+PIM_fcast_2024$lPIM_8pc[1:12] <- log(Data$PIM_ALL$PIM[idx_ini:idx_fim])
+
+# Initialize the 0% forecast scenario
+for(i in 13:nrow(PIM_fcast_2024)){
+  PIM_fcast_2024$lPIM_0pc[i] <- PIM_fcast_2024$lPIM_0pc[i-12]
+  PIM_fcast_2024$lPIM_2pc[i] <- PIM_fcast_2024$lPIM_2pc[i-12] + tx_2pc
+  PIM_fcast_2024$lPIM_4pc[i] <- PIM_fcast_2024$lPIM_4pc[i-12] + tx_4pc
+  PIM_fcast_2024$lPIM_6pc[i] <- PIM_fcast_2024$lPIM_6pc[i-12] + tx_6pc
+  PIM_fcast_2024$lPIM_8pc[i] <- PIM_fcast_2024$lPIM_8pc[i-12] + tx_8pc
+}
+
+PIM_fcast_2024 <- PIM_fcast_2024 %>% dplyr::filter(h >0)
 
 
-tail(PIM_fcast_1)
-tail(PIM_fcast_2)
 
-writexl::write_xlsx(x = list("Fcast2016" = PIM_fcast_1, "Fcast2024" = PIM_fcast_2),
+
+tail(PIM_fcast)
+tail(PIM_fcast_2024)
+
+writexl::write_xlsx(x = list("Fcast2016" = PIM_fcast, "Fcast2024" = PIM_fcast_2024),
                     path = file.path(mDirPath, mPIMForecastOutputFile) )
