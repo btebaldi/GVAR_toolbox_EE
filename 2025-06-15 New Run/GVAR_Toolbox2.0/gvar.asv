@@ -3002,10 +3002,6 @@ if con_forc_flag==1
         
         if not(misal)
             rx = [];
-        else
-            % tebaldi: adding else because rx is not defined
-            
-            rx = [];
         end
         
         if cols(rx) > con_fhorz % if horizon of actual data is larger than forecast horizon, trim actual data
