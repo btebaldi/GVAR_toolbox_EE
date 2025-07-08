@@ -6,13 +6,6 @@ library(readxl)
 library(tidyverse)
 
 
-# User Defined Function ---------------------------------------------------
-
-# ht <- function(x){
-#   list("Head" = head(x), "Tail" = tail(x))
-# }
-# 
-
 # Internal Variabels ------------------------------------------------------
 
 # Dir and files of results
@@ -171,7 +164,8 @@ graph <- tbl2 %>%
   ggplot() + 
   geom_line(aes(x = Date, y = NetCumSum, colour = Tipo, linetype = Tipo)) + 
   labs(title = "Cumulative employment forecast",
-       subtitle = sprintf("Brazilian level",  names(mListRegions)[i])) +
+       subtitle = "Brazilian level",
+       x=NULL, y=NULL) +
   theme_bw() + 
   theme(legend.position = "bottom") +
   scale_color_manual(breaks = c("Actual", sprintf("Perc_%d", c(0:4)*2)),
